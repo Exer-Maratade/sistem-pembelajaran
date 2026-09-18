@@ -7,9 +7,13 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import Avg, Count, Q
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
+from django.utils.text import slugify
 from django.views.decorators.http import require_POST
+
+from .exports import generate_exam_excel, generate_exam_pdf
 
 from .forms import (
     AdminModulBelajarForm,
@@ -577,10 +581,19 @@ def daftar_ujian(request):
         for item in ujian:
             item.bisa_dikelola = True
             item.jumlah_soal = item.soal_esai.count() if item.metode == Ujian.Metode.ESAI else item.soal_pilihan_ganda.count()
+
+    ujian_list = list(ujian)
+    ujian_aktif = [item for item in ujian_list if not item.sudah_selesai]
+    ujian_selesai = [item for item in ujian_list if item.sudah_selesai]
+
     return render(
         request,
         "lms/daftar_ujian.html",
-        {"ujian": ujian},
+        {
+            "ujian": ujian_list,
+            "ujian_aktif": ujian_aktif,
+            "ujian_selesai": ujian_selesai,
+        },
     )
 
 
@@ -889,6 +902,36 @@ def hasil_ujian(request, pk):
     if not rows:
         raise PermissionDenied
     return render(request, "lms/hasil_ujian.html", {"ujian": ujian, "rows": rows})
+
+
+@role_required(CustomUser.Role.ADMIN, CustomUser.Role.GADIK)
+def export_hasil_ujian_excel(request, pk):
+    ujian = get_object_or_404(ujian_for_manager(request.user), pk=pk)
+    excel_buffer = generate_exam_excel(ujian)
+    safe_judul = slugify(ujian.judul) or "ujian"
+    safe_kelas = slugify(ujian.kelas.nama_kelas) or "kelas"
+    filename = f"Hasil_Ujian_{safe_judul}_{safe_kelas}.xlsx"
+    response = HttpResponse(
+        excel_buffer.getvalue(),
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    )
+    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+    return response
+
+
+@role_required(CustomUser.Role.ADMIN, CustomUser.Role.GADIK)
+def export_hasil_ujian_pdf(request, pk):
+    ujian = get_object_or_404(ujian_for_manager(request.user), pk=pk)
+    pdf_buffer = generate_exam_pdf(ujian)
+    safe_judul = slugify(ujian.judul) or "ujian"
+    safe_kelas = slugify(ujian.kelas.nama_kelas) or "kelas"
+    filename = f"Hasil_Ujian_{safe_judul}_{safe_kelas}.pdf"
+    response = HttpResponse(
+        pdf_buffer.getvalue(),
+        content_type="application/pdf",
+    )
+    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+    return response
 
 
 @login_required

@@ -1336,3 +1336,130 @@ class LmsWorkflowTests(TestCase):
         pengelolaan_response = self.client.get(reverse("pengelolaan_admin"))
         self.assertEqual(len(pengelolaan_response.context["modul"]), 1)
         self.assertEqual(pengelolaan_response.context["modul"][0].judul, "Modul Bersama")
+
+    def test_daftar_ujian_separates_active_and_completed_exams(self):
+        self.client.force_login(self.gadik)
+        ujian_aktif = Ujian.objects.create(
+            kelas=self.kelas,
+            mapel=self.mapel,
+            gadik=self.gadik,
+            judul="Ujian Aktif Berlangsung",
+            metode=Ujian.Metode.PILIHAN_GANDA,
+            instruksi="Kerjakan dengan teliti.",
+            waktu_mulai=timezone.now() - timedelta(minutes=10),
+            waktu_selesai=timezone.now() + timedelta(minutes=50),
+            durasi_menit=60,
+        )
+        ujian_selesai = Ujian.objects.create(
+            kelas=self.kelas,
+            mapel=self.mapel,
+            gadik=self.gadik,
+            judul="Ujian Riwayat Selesai",
+            metode=Ujian.Metode.ESAI,
+            instruksi="Ujian kemarin.",
+            waktu_mulai=timezone.now() - timedelta(hours=3),
+            waktu_selesai=timezone.now() - timedelta(hours=1),
+            durasi_menit=60,
+        )
+
+        response = self.client.get(reverse("daftar_ujian"))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("ujian_aktif", response.context)
+        self.assertIn("ujian_selesai", response.context)
+        aktif_ids = [item.pk for item in response.context["ujian_aktif"]]
+        selesai_ids = [item.pk for item in response.context["ujian_selesai"]]
+        self.assertIn(ujian_aktif.pk, aktif_ids)
+        self.assertNotIn(ujian_selesai.pk, aktif_ids)
+        self.assertIn(ujian_selesai.pk, selesai_ids)
+        self.assertNotIn(ujian_aktif.pk, selesai_ids)
+
+        self.assertContains(response, "Ujian Sedang Berlangsung &amp; Akan Datang")
+        self.assertContains(response, "Ujian yang Sudah Selesai Dilaksanakan")
+        self.assertContains(response, "Ujian Aktif Berlangsung")
+        self.assertContains(response, "Ujian Riwayat Selesai")
+        self.assertContains(response, reverse("export_hasil_ujian_excel", args=[ujian_aktif.pk]))
+        self.assertContains(response, reverse("export_hasil_ujian_pdf", args=[ujian_aktif.pk]))
+
+    def test_gadik_can_export_exam_results_excel_and_pdf(self):
+        ujian = Ujian.objects.create(
+            kelas=self.kelas,
+            mapel=self.mapel,
+            gadik=self.gadik,
+            judul="Ujian Penilaian Akhir",
+            metode=Ujian.Metode.PILIHAN_GANDA,
+            instruksi="Pilihlah opsi yang benar.",
+            waktu_mulai=timezone.now() - timedelta(hours=2),
+            waktu_selesai=timezone.now() - timedelta(hours=1),
+            durasi_menit=60,
+        )
+        soal = SoalUjianPilihanGanda.objects.create(
+            ujian=ujian, urutan=1, pertanyaan="Apa itu integritas?"
+        )
+        opsi_benar = OpsiUjianPilihanGanda.objects.create(
+            soal=soal, urutan=1, teks="Kejujuran dan konsistensi", is_kunci=True
+        )
+        pengumpulan = PengumpulanUjian.objects.create(
+            ujian=ujian,
+            serdik=self.serdik,
+            started_at=timezone.now() - timedelta(hours=2),
+            submitted_at=timezone.now() - timedelta(hours=1, minutes=30),
+            nilai=Decimal("100.00"),
+        )
+        JawabanUjianPilihanGanda.objects.create(
+            pengumpulan=pengumpulan,
+            soal=soal,
+            opsi=opsi_benar,
+            skor=Decimal("100.00"),
+        )
+
+        self.client.force_login(self.gadik)
+
+        # 1. Export Excel
+        res_excel = self.client.get(reverse("export_hasil_ujian_excel", args=[ujian.pk]))
+        self.assertEqual(res_excel.status_code, 200)
+        self.assertEqual(
+            res_excel["Content-Type"],
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        )
+        self.assertIn("Hasil_Ujian_", res_excel["Content-Disposition"])
+        self.assertTrue(res_excel.content.startswith(b"PK"))
+
+        # 2. Export PDF
+        res_pdf = self.client.get(reverse("export_hasil_ujian_pdf", args=[ujian.pk]))
+        self.assertEqual(res_pdf.status_code, 200)
+        self.assertEqual(res_pdf["Content-Type"], "application/pdf")
+        self.assertIn("Hasil_Ujian_", res_pdf["Content-Disposition"])
+        self.assertTrue(res_pdf.content.startswith(b"%PDF"))
+
+        # 3. Check export buttons exist on hasil_ujian page for Gadik
+        hasil_page = self.client.get(reverse("hasil_ujian", args=[ujian.pk]))
+        self.assertContains(hasil_page, reverse("export_hasil_ujian_excel", args=[ujian.pk]))
+        self.assertContains(hasil_page, reverse("export_hasil_ujian_pdf", args=[ujian.pk]))
+
+    def test_student_and_unauthorized_gadik_cannot_export(self):
+        ujian = Ujian.objects.create(
+            kelas=self.kelas,
+            mapel=self.mapel,
+            gadik=self.gadik,
+            judul="Ujian Rahasia",
+            metode=Ujian.Metode.ESAI,
+            instruksi="Esai rahasia.",
+            waktu_mulai=timezone.now() - timedelta(hours=1),
+            waktu_selesai=timezone.now() + timedelta(hours=1),
+            durasi_menit=60,
+        )
+
+        # Serdik should be forbidden (403)
+        self.client.force_login(self.serdik)
+        res_excel_serdik = self.client.get(reverse("export_hasil_ujian_excel", args=[ujian.pk]))
+        self.assertEqual(res_excel_serdik.status_code, 403)
+        res_pdf_serdik = self.client.get(reverse("export_hasil_ujian_pdf", args=[ujian.pk]))
+        self.assertEqual(res_pdf_serdik.status_code, 403)
+
+        # Gadik lain (not teaching this mapel) should get 404
+        self.client.force_login(self.gadik_lain)
+        res_excel_gadik_lain = self.client.get(reverse("export_hasil_ujian_excel", args=[ujian.pk]))
+        self.assertEqual(res_excel_gadik_lain.status_code, 404)
+        res_pdf_gadik_lain = self.client.get(reverse("export_hasil_ujian_pdf", args=[ujian.pk]))
+        self.assertEqual(res_pdf_gadik_lain.status_code, 404)
+

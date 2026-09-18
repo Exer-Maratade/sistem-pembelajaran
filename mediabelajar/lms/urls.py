@@ -41,6 +41,8 @@ urlpatterns = [
     path("ujian/<int:pk>/mulai/", views.mulai_ujian_esai, name="mulai_ujian_esai"),
     path("ujian/<int:pk>/kerjakan/", views.kerjakan_ujian_esai, name="kerjakan_ujian_esai"),
     path("ujian/<int:pk>/hasil/", views.hasil_ujian, name="hasil_ujian"),
+    path("ujian/<int:pk>/export/excel/", views.export_hasil_ujian_excel, name="export_hasil_ujian_excel"),
+    path("ujian/<int:pk>/export/pdf/", views.export_hasil_ujian_pdf, name="export_hasil_ujian_pdf"),
     path("ujian/<int:pk>/soal-esai/", views.kelola_soal_esai, name="kelola_soal_esai"),
     path(
         "ujian/<int:pk>/soal-esai/<int:soal_pk>/hapus/",

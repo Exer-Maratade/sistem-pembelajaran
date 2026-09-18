@@ -8,7 +8,13 @@
 {% endif %}
 <header class="page-heading heading-with-action">
     <div><p class="eyebrow">HASIL UJIAN {{ ujian.get_metode_display|upper }}</p><h1>{{ ujian.judul }}</h1><p>{{ ujian.mapel.nama_mapel }} &bull; {{ ujian.kelas }} &bull; {% if is_student_result %}Evaluasi jawaban Anda{% else %}Pemeriksaan per soal{% endif %}</p></div>
-    <span class="exam-method"><i data-lucide="clipboard-check"></i>{% if is_student_result %}Hasil Saya{% elif show_submission_table %}{{ pengumpulan_rows|length }} pengumpulan{% else %}Detail hasil{% endif %}</span>
+    <div class="d-flex align-items-center gap-2 flex-wrap">
+        {% if not is_student_result %}
+        <a class="btn btn-outline-success" href="{% url 'export_hasil_ujian_excel' ujian.pk %}"><i data-lucide="sheet"></i>Export Excel</a>
+        <a class="btn btn-outline-danger" href="{% url 'export_hasil_ujian_pdf' ujian.pk %}"><i data-lucide="file-down"></i>Export PDF</a>
+        {% endif %}
+        <span class="exam-method"><i data-lucide="clipboard-check"></i>{% if is_student_result %}Hasil Saya{% elif show_submission_table %}{{ pengumpulan_rows|length }} pengumpulan{% else %}Detail hasil{% endif %}</span>
+    </div>
 </header>
 {% if show_submission_table %}
 <div class="table-shell"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Siswa</th><th>Dikumpulkan</th><th>Nilai</th><th>Aksi</th></tr></thead><tbody>

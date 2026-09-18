@@ -358,7 +358,8 @@ class PengumpulanUjian(models.Model):
             skor = skor_tanpa_pembulatan.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
             if jawaban_obj:
                 jawaban_obj.skor = skor
-                jawaban_obj.save(update_fields=["skor"])
+                jawaban_obj.skor_otomatis = skor
+                jawaban_obj.save(update_fields=["skor", "skor_otomatis"])
             total_tanpa_pembulatan += skor_tanpa_pembulatan
         if all(item.pemeriksaan == SoalUjianEsai.Pemeriksaan.OTOMATIS for item in soal):
             self.nilai = min(total_tanpa_pembulatan, Decimal("100.00")).quantize(
@@ -399,6 +400,8 @@ class JawabanUjianEsai(models.Model):
     soal = models.ForeignKey(SoalUjianEsai, on_delete=models.CASCADE, related_name="jawaban")
     jawaban = models.TextField()
     skor = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    skor_otomatis = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    alasan_koreksi = models.TextField(blank=True)
 
     class Meta:
         constraints = [

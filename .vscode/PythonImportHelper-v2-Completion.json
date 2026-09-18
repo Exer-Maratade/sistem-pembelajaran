@@ -85,6 +85,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
@@ -294,6 +302,22 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -577,52 +601,20 @@
         "documentation": {}
     },
     {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
-        "documentation": {}
-    },
-    {
-        "label": "UserCreationForm",
-        "importPath": "django.contrib.auth.forms",
-        "description": "django.contrib.auth.forms",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.forms",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "PermissionDenied",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "re",
+        "label": "io",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
         "documentation": {}
     },
     {
@@ -698,6 +690,232 @@
         "documentation": {}
     },
     {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "openpyxl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openpyxl",
+        "description": "openpyxl",
+        "detail": "openpyxl",
+        "documentation": {}
+    },
+    {
+        "label": "Alignment",
+        "importPath": "openpyxl.styles",
+        "description": "openpyxl.styles",
+        "isExtraImport": true,
+        "detail": "openpyxl.styles",
+        "documentation": {}
+    },
+    {
+        "label": "Border",
+        "importPath": "openpyxl.styles",
+        "description": "openpyxl.styles",
+        "isExtraImport": true,
+        "detail": "openpyxl.styles",
+        "documentation": {}
+    },
+    {
+        "label": "Font",
+        "importPath": "openpyxl.styles",
+        "description": "openpyxl.styles",
+        "isExtraImport": true,
+        "detail": "openpyxl.styles",
+        "documentation": {}
+    },
+    {
+        "label": "PatternFill",
+        "importPath": "openpyxl.styles",
+        "description": "openpyxl.styles",
+        "isExtraImport": true,
+        "detail": "openpyxl.styles",
+        "documentation": {}
+    },
+    {
+        "label": "Side",
+        "importPath": "openpyxl.styles",
+        "description": "openpyxl.styles",
+        "isExtraImport": true,
+        "detail": "openpyxl.styles",
+        "documentation": {}
+    },
+    {
+        "label": "get_column_letter",
+        "importPath": "openpyxl.utils",
+        "description": "openpyxl.utils",
+        "isExtraImport": true,
+        "detail": "openpyxl.utils",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "importPath": "reportlab.lib",
+        "description": "reportlab.lib",
+        "isExtraImport": true,
+        "detail": "reportlab.lib",
+        "documentation": {}
+    },
+    {
+        "label": "A4",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "landscape",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "ParagraphStyle",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "getSampleStyleSheet",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "cm",
+        "importPath": "reportlab.lib.units",
+        "description": "reportlab.lib.units",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.units",
+        "documentation": {}
+    },
+    {
+        "label": "HRFlowable",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Paragraph",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleDocTemplate",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Spacer",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "TableStyle",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionDenied",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
         "label": "SimpleUploadedFile",
         "importPath": "django.core.files.uploadedfile",
         "description": "django.core.files.uploadedfile",
@@ -759,6 +977,14 @@
         "description": "django.contrib.auth.decorators",
         "isExtraImport": true,
         "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -1096,6 +1322,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "mediabelajar.lms.migrations.0015_jawabanujianesai_alasan_koreksi_and_more",
+        "description": "mediabelajar.lms.migrations.0015_jawabanujianesai_alasan_koreksi_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0014_soalujianpilihanganda_opsiujianpilihanganda_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='jawabanujianesai',\n            name='alasan_koreksi',\n            field=models.TextField(blank=True),\n        ),",
+        "detail": "mediabelajar.lms.migrations.0015_jawabanujianesai_alasan_koreksi_and_more",
+        "documentation": {}
+    },
+    {
         "label": "CustomUserAdmin",
         "kind": 6,
         "importPath": "mediabelajar.lms.admin",
@@ -1246,6 +1481,33 @@
         "description": "mediabelajar.lms.backend",
         "peekOfCode": "class NipNrpBackend(ModelBackend):\n    def authenticate(self, request, username=None, password=None, **kwargs):\n        User = get_user_model()\n        try:\n            user = User.objects.get(nip_nrp=username)\n        except User.DoesNotExist:\n            return None\n        if user.check_password(password) and self.user_can_authenticate(user):\n            return user\n        return None",
         "detail": "mediabelajar.lms.backend",
+        "documentation": {}
+    },
+    {
+        "label": "get_exam_summary_data",
+        "kind": 2,
+        "importPath": "mediabelajar.lms.exports",
+        "description": "mediabelajar.lms.exports",
+        "peekOfCode": "def get_exam_summary_data(ujian: Ujian):\n    \"\"\"\n    Mengambil data peserta ujian dan pengumpulan secara terstruktur.\n    \"\"\"\n    anggota_qs = ujian.kelas.anggota.select_related(\"serdik\").order_by(\n        \"serdik__nama_lengkap\", \"serdik__username\"\n    )\n    pengumpulan_qs = ujian.pengumpulan.select_related(\"serdik\").prefetch_related(\n        \"jawaban_pilihan_ganda__opsi\",\n        \"jawaban_esai\",",
+        "detail": "mediabelajar.lms.exports",
+        "documentation": {}
+    },
+    {
+        "label": "generate_exam_excel",
+        "kind": 2,
+        "importPath": "mediabelajar.lms.exports",
+        "description": "mediabelajar.lms.exports",
+        "peekOfCode": "def generate_exam_excel(ujian: Ujian) -> io.BytesIO:\n    \"\"\"\n    Menghasilkan file Excel (.xlsx) rekapitulasi hasil ujian.\n    \"\"\"\n    data = get_exam_summary_data(ujian)\n    wb = openpyxl.Workbook()\n    ws = wb.active\n    ws.title = \"Hasil Ujian\"\n    # Styling constants\n    green_header = PatternFill(start_color=\"176B45\", end_color=\"176B45\", fill_type=\"solid\")",
+        "detail": "mediabelajar.lms.exports",
+        "documentation": {}
+    },
+    {
+        "label": "generate_exam_pdf",
+        "kind": 2,
+        "importPath": "mediabelajar.lms.exports",
+        "description": "mediabelajar.lms.exports",
+        "peekOfCode": "def generate_exam_pdf(ujian: Ujian) -> io.BytesIO:\n    \"\"\"\n    Menghasilkan file PDF (.pdf) rekapitulasi hasil ujian dengan ReportLab.\n    \"\"\"\n    data = get_exam_summary_data(ujian)\n    buffer = io.BytesIO()\n    doc = SimpleDocTemplate(\n        buffer,\n        pagesize=landscape(A4),\n        leftMargin=1.5 * cm,",
+        "detail": "mediabelajar.lms.exports",
         "documentation": {}
     },
     {
@@ -1577,7 +1839,7 @@
         "kind": 6,
         "importPath": "mediabelajar.lms.models",
         "description": "mediabelajar.lms.models",
-        "peekOfCode": "class JawabanUjianEsai(models.Model):\n    pengumpulan = models.ForeignKey(PengumpulanUjian, on_delete=models.CASCADE, related_name=\"jawaban_esai\")\n    soal = models.ForeignKey(SoalUjianEsai, on_delete=models.CASCADE, related_name=\"jawaban\")\n    jawaban = models.TextField()\n    skor = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    class Meta:\n        constraints = [\n            models.UniqueConstraint(fields=[\"pengumpulan\", \"soal\"], name=\"unik_jawaban_esai_per_soal\")\n        ]\n        verbose_name_plural = \"Jawaban ujian esai\"",
+        "peekOfCode": "class JawabanUjianEsai(models.Model):\n    pengumpulan = models.ForeignKey(PengumpulanUjian, on_delete=models.CASCADE, related_name=\"jawaban_esai\")\n    soal = models.ForeignKey(SoalUjianEsai, on_delete=models.CASCADE, related_name=\"jawaban\")\n    jawaban = models.TextField()\n    skor = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    skor_otomatis = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    alasan_koreksi = models.TextField(blank=True)\n    class Meta:\n        constraints = [\n            models.UniqueConstraint(fields=[\"pengumpulan\", \"soal\"], name=\"unik_jawaban_esai_per_soal\")",
         "detail": "mediabelajar.lms.models",
         "documentation": {}
     },
@@ -1992,6 +2254,24 @@
         "importPath": "mediabelajar.lms.views",
         "description": "mediabelajar.lms.views",
         "peekOfCode": "def hasil_ujian(request, pk):\n    if request.user.role == CustomUser.Role.SERDIK:\n        if request.method == \"POST\":\n            raise PermissionDenied\n        ujian = get_object_or_404(Ujian.objects.filter(kelas__anggota__serdik=request.user), pk=pk)\n        pengumpulan = get_object_or_404(\n            ujian.pengumpulan.filter(serdik=request.user, submitted_at__isnull=False).select_related(\"serdik\")\n        )\n        if ujian.metode == Ujian.Metode.PILIHAN_GANDA:\n            jawaban = list(",
+        "detail": "mediabelajar.lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_hasil_ujian_excel",
+        "kind": 2,
+        "importPath": "mediabelajar.lms.views",
+        "description": "mediabelajar.lms.views",
+        "peekOfCode": "def export_hasil_ujian_excel(request, pk):\n    ujian = get_object_or_404(ujian_for_manager(request.user), pk=pk)\n    excel_buffer = generate_exam_excel(ujian)\n    safe_judul = slugify(ujian.judul) or \"ujian\"\n    safe_kelas = slugify(ujian.kelas.nama_kelas) or \"kelas\"\n    filename = f\"Hasil_Ujian_{safe_judul}_{safe_kelas}.xlsx\"\n    response = HttpResponse(\n        excel_buffer.getvalue(),\n        content_type=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n    )",
+        "detail": "mediabelajar.lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_hasil_ujian_pdf",
+        "kind": 2,
+        "importPath": "mediabelajar.lms.views",
+        "description": "mediabelajar.lms.views",
+        "peekOfCode": "def export_hasil_ujian_pdf(request, pk):\n    ujian = get_object_or_404(ujian_for_manager(request.user), pk=pk)\n    pdf_buffer = generate_exam_pdf(ujian)\n    safe_judul = slugify(ujian.judul) or \"ujian\"\n    safe_kelas = slugify(ujian.kelas.nama_kelas) or \"kelas\"\n    filename = f\"Hasil_Ujian_{safe_judul}_{safe_kelas}.pdf\"\n    response = HttpResponse(\n        pdf_buffer.getvalue(),\n        content_type=\"application/pdf\",\n    )",
         "detail": "mediabelajar.lms.views",
         "documentation": {}
     },
