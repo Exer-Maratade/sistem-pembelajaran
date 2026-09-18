@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Hapus {{ type|title }} | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading"><p class="eyebrow">KONFIRMASI</p><h1>Hapus {{ type }}?</h1><p>Tindakan ini tidak dapat dibatalkan.</p></header>
+<form method="post" class="form-panel delete-panel">
+    {% csrf_token %}
+    <span class="danger-icon"><i data-lucide="triangle-alert"></i></span>
+    <div><h2>{{ object }}</h2><p>Pastikan data ini memang sudah tidak diperlukan sebelum melanjutkan.</p></div>
+    <div class="form-actions"><button class="btn btn-danger" type="submit"><i data-lucide="trash-2"></i>Hapus permanen</button><button class="btn btn-light" type="button" onclick="history.back()">Batal</button></div>
+</form>
+{% endblock %}

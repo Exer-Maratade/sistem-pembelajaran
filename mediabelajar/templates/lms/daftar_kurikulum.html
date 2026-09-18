@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Daftar Kurikulum | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">KURIKULUM</p><h1>Daftar Kurikulum</h1><p>Kelola kurikulum yang tersedia dan tentukan status penggunaannya.</p></div>
+    <a class="btn btn-primary px-4 py-2" href="{% url 'tambah_kurikulum' %}"><i data-lucide="plus"></i>Tambah Kurikulum</a>
+</header>
+
+<div class="card border-0 shadow-sm overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light"><tr><th class="ps-4">Kurikulum</th><th>Tahun Ajaran</th><th>Mata Pelajaran</th><th>Kelas</th><th>Siswa</th><th class="text-center pe-4">Aktif</th></tr></thead>
+            <tbody>
+                {% for item in kurikulum %}
+                <tr>
+                    <td class="ps-4"><strong>{{ item.nama_kurikulum }}</strong></td>
+                    <td>{{ item.tahun_ajaran }}</td>
+                    <td><span class="badge bg-info-subtle text-info-emphasis rounded-pill">{{ item.jumlah_mapel }} mapel</span></td>
+                    <td><span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">{{ item.jumlah_kelas }} kelas</span></td>
+                    <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">{{ item.jumlah_siswa }} siswa</span></td>
+                    <td class="text-center pe-4">
+                        <form method="post" action="{% url 'ubah_status_kurikulum' item.pk %}">
+                            {% csrf_token %}
+                            <div class="form-check form-switch d-inline-flex align-items-center gap-2 mb-0">
+                                <input class="form-check-input m-0" type="checkbox" role="switch" name="is_active" aria-label="Aktifkan {{ item.nama_kurikulum }}" {% if item.is_active %}checked{% endif %} onchange="this.form.submit()">
+                                <span class="small {% if item.is_active %}text-success{% else %}text-secondary{% endif %}">{% if item.is_active %}Aktif{% else %}Tidak aktif{% endif %}</span>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                {% empty %}<tr><td colspan="6"><div class="empty-state compact"><i data-lucide="book-copy"></i><p>Belum ada kurikulum yang terdaftar.</p></div></td></tr>{% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

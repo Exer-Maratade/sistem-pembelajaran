@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ tugas.judul_tugas }} | LMS Presisi
+{% endblock %}
+
+{% block content %}
+  <a class="back-link" href="{% url 'detail_kelas' tugas.kelas_id %}"><i data-lucide="arrow-left"></i>{{ tugas.kelas }}</a>
+  <div class="detail-layout">
+    <article class="detail-main">
+      <h2 class="eyebrow">{{ tugas.mapel.kode_mapel }} &bull; Mata Pelajaran: {{ tugas.mapel.nama_mapel }}</h2>
+      <h1>{{ tugas.judul_tugas }}</h1>
+      <div class="author-line">
+        <span class="avatar avatar-sm">{{ tugas.gadik.display_name|slice:':1' }}</span><span><strong>Dibuat oleh {{ tugas.gadik.display_name }}</strong><small>Diterbitkan {{ tugas.created_at|date:'d F Y' }}</small></span>
+      </div>
+      <hr /><h2>Instruksi</h2><div class="instruction-copy">{{ tugas.instruksi|linebreaks }}</div>
+      {% if tugas.file_lampiran %}
+        <a class="attachment" href="{{ tugas.file_lampiran.url }}" target="_blank"><i data-lucide="paperclip"></i><span><strong>Lampiran tugas</strong><small>Buka atau unduh berkas</small></span><i data-lucide="download"></i></a>
+      {% endif %}
+    </article>
+    <aside class="submission-panel">
+      <p class="eyebrow">STATUS TUGAS</p>
+      <div class="deadline-box">
+        <i data-lucide="clock-3"></i><span><small>TENGGAT</small><strong>{{ tugas.deadline|date:'d F Y' }}</strong><small>{{ tugas.deadline|date:'H:i' }} WIB</small></span>
+      </div>
+      <div class="weight-line">
+        <span>Bobot penilaian</span><strong>{{ tugas.bobot }}%</strong>
+      </div>
+      
+      {% if user.role == 'SERDIK' %}
+        {% if pengumpulan %}
+          <div class="submission-confirmation">
+            <span><i data-lucide="circle-check-big"></i></span>
+            <div><strong>Tugas sudah dikumpulkan</strong><small>Dikirim {{ pengumpulan.submitted_at|date:'d M Y, H:i' }} WIB</small></div>
+          </div>
+          <div class="status-block">
+            <span class="status-badge status-{{ pengumpulan.status|lower }}">{{ pengumpulan.get_status_display }}</span>{% if pengumpulan.nilai != None %}
+              <div class="grade-display">
+                <small>NILAI</small><strong>{{ pengumpulan.nilai }}</strong>
+              </div>
+              <p><strong>Dinilai oleh {{ pengumpulan.dinilai_oleh.display_name|default:'Belum tercatat' }}</strong></p>
+              <p>{{ pengumpulan.catatan_gadik|default:'Belum ada umpan balik.' }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if not pengumpulan or pengumpulan.status != 'DINILAI' %}
+          <a class="btn btn-primary w-100" href="{% url 'kumpulkan_tugas' tugas.pk %}">
+            <i data-lucide="upload"></i>{% if pengumpulan %}
+              Unggah ulang
+            {% else %}
+              Kumpulkan tugas
+            {% endif %}
+          </a>
+        {% endif %}
+      {% elif user.role == 'GADIK' or user.role == 'ADMIN' or user.is_superuser %}
+        <a class="btn btn-primary w-100" href="{% url 'daftar_pengumpulan' tugas.pk %}"><i data-lucide="users"></i>Lihat pengumpulan</a>
+        {% if tugas.gadik_id == user.id or user.role == 'ADMIN' or user.is_superuser %}
+          <a class="btn btn-outline-secondary w-100 mt-2" href="{% url 'ubah_tugas' tugas.pk %}"><i data-lucide="pencil"></i>Ubah tugas</a>
+          <a class="btn btn-link text-danger w-100 mt-1" href="{% url 'hapus_tugas' tugas.pk %}"><i data-lucide="trash-2"></i>Hapus tugas</a>
+        {% endif %}
+      {% endif %}
+    </aside>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }} | LMS Presisi{% endblock %}
+{% block content %}
+<a class="back-link" href="{% url 'daftar_ujian' %}"><i data-lucide="arrow-left"></i>Kembali ke daftar ujian</a>
+<header class="page-heading"><p class="eyebrow">PENGATURAN UJIAN</p><h1>{{ title }}</h1><p>Tentukan metode ujian, kelas, mata pelajaran, dan jadwal pelaksanaan.</p></header>
+<form method="post" class="form-panel exam-form">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+    <section class="exam-form-section">
+        <div class="exam-form-heading"><span>01</span><div><h2>Metode ujian</h2><p>Pilih bentuk jawaban yang akan digunakan.</p></div></div>
+        <div class="exam-method-picker">
+            {% for radio in form.metode %}
+            <label class="exam-method-choice">
+                {{ radio.tag }}
+                <span class="exam-method-icon"><i data-lucide="{% if radio.choice_label == 'Esai' %}text-cursor-input{% else %}list-checks{% endif %}"></i></span>
+                <span><strong>{{ radio.choice_label }}</strong><small>{% if radio.choice_label == 'Esai' %}Jawaban berupa uraian tertulis{% else %}Jawaban dipilih dari opsi tersedia{% endif %}</small></span>
+                <i class="exam-method-check" data-lucide="circle-check"></i>
+            </label>
+            {% endfor %}
+        </div>
+        {% for error in form.metode.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+    </section>
+    <section class="exam-form-section">
+        <div class="exam-form-heading"><span>02</span><div><h2>Informasi ujian</h2><p>Hubungkan ujian dengan kelas dan mata pelajaran.</p></div></div>
+        <div class="row g-3">
+            {% for field in form %}{% if field.name != 'metode' and field.name != 'instruksi' and field.name != 'waktu_mulai' and field.name != 'waktu_selesai' and field.name != 'durasi_menit' %}
+            <div class="col-md-{% if field.name == 'judul' %}12{% else %}6{% endif %}"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            {% endif %}{% endfor %}
+            <div class="col-12"><label class="form-label" for="{{ form.instruksi.id_for_label }}">{{ form.instruksi.label }}</label>{{ form.instruksi }}{% for error in form.instruksi.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+        </div>
+    </section>
+    <section class="exam-form-section">
+        <div class="exam-form-heading"><span>03</span><div><h2>Jadwal pelaksanaan</h2><p>Durasi siswa dimulai setelah konfirmasi dan tidak melewati batas akhir.</p></div></div>
+        <div class="row g-3">
+            <div class="col-md-4"><label class="form-label" for="{{ form.waktu_mulai.id_for_label }}">{{ form.waktu_mulai.label }}</label>{{ form.waktu_mulai }}{% for error in form.waktu_mulai.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            <div class="col-md-4"><label class="form-label" for="{{ form.waktu_selesai.id_for_label }}">{{ form.waktu_selesai.label }}</label>{{ form.waktu_selesai }}{% for error in form.waktu_selesai.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            <div class="col-md-4"><label class="form-label" for="{{ form.durasi_menit.id_for_label }}">{{ form.durasi_menit.label }}</label>{{ form.durasi_menit }}{% for error in form.durasi_menit.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+        </div>
+    </section>
+    <div class="form-actions"><button class="btn btn-primary" type="submit"><i data-lucide="save"></i>{% if ujian %}Simpan perubahan{% else %}Terbitkan ujian{% endif %}</button><a class="btn btn-outline-secondary" href="{% url 'daftar_ujian' %}">Batal</a></div>
+</form>
+{% endblock %}

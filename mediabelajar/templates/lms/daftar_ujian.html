@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+  Ujian | LMS Presisi
+{% endblock %}
+{% block content %}
+  <header class="page-heading heading-with-action">
+    <div>
+      <p class="eyebrow">EVALUASI PEMBELAJARAN</p><h1>Ujian</h1><p>Daftar ujian esai dan pilihan ganda sesuai kelas dan mata pelajaran Anda.</p>
+    </div>
+    {% if user.role == 'GADIK' or user.role == 'ADMIN' or user.is_superuser %}
+      <a class="btn btn-primary px-4 py-2" href="{% url 'buat_ujian' %}"><i data-lucide="file-plus-2"></i>Buat Ujian</a>
+    {% endif %}
+  </header>
+  <div class="exam-grid">
+    {% for item in ujian %}
+      <article class="exam-card">
+        <div class="exam-card-top">
+          <span class="exam-method exam-method-{{ item.metode|lower }}">
+            <i data-lucide="{% if item.metode == 'ESAI' %}
+                text-cursor-input
+              {% else %}
+                list-checks
+              {% endif %}">
+
+            </i>{{ item.get_metode_display }}
+          </span>
+          <span class="exam-duration"><i data-lucide="timer"></i>{{ item.durasi_menit }} menit</span>
+        </div>
+        <div class="exam-card-copy">
+          <small>{{ item.mapel.kode_mapel }} &bull; {{ item.kelas }}</small>
+          <h2>{{ item.judul }}</h2>
+          <p>{{ item.instruksi|truncatewords:18 }}</p>
+        </div>
+        <div class="exam-schedule">
+          <span><small>MULAI</small><strong>{{ item.waktu_mulai|date:'d M Y, H:i' }}</strong></span>
+          <i data-lucide="arrow-right"></i>
+          <span><small>BATAS AKHIR</small><strong>{{ item.waktu_selesai|date:'d M Y, H:i' }}</strong></span>
+        </div>
+        <div class="exam-card-footer">
+          <span>Dibuat oleh {{ item.gadik.display_name }}</span><span>{{ item.mapel.nama_mapel }}</span>
+        </div>
+        {% if item.bisa_dikelola %}
+          <div class="exam-card-actions">
+            <a class="btn btn-outline-secondary" href="{% url 'ubah_ujian' item.pk %}"><i data-lucide="pencil"></i>Edit</a>
+            {% if item.metode == 'ESAI' %}
+              <a class="btn btn-outline-success" href="{% url 'kelola_soal_esai' item.pk %}"><i data-lucide="list-plus"></i>Input Soal &amp; Kunci Jawaban</a>
+            {% else %}
+              <a class="btn btn-outline-success" href="{% url 'kelola_soal_pilihan_ganda' item.pk %}"><i data-lucide="list-plus"></i>Input Soal &amp; Kunci Jawaban</a>
+            {% endif %}
+            <a class="btn btn-outline-success" href="{% url 'hasil_ujian' item.pk %}"><i data-lucide="clipboard-check"></i>Hasil ({{ item.jumlah_pengumpulan }})</a>
+          </div>
+        {% elif user.role == 'SERDIK' %}
+          {% if item.percobaan_siswa.sudah_dikumpulkan %}
+            <span class="exam-submitted"><i data-lucide="circle-check-big"></i>Ujian sudah dikumpulkan</span>
+            <a class="btn btn-outline-success w-100 mt-2" href="{% url 'hasil_ujian' item.pk %}"><i data-lucide="clipboard-check"></i>Lihat Hasil</a>
+          {% elif item.percobaan_siswa and item.percobaan_siswa.waktu_habis %}
+            <span class="exam-unavailable"><i data-lucide="lock-keyhole"></i>Waktu pengerjaan habis</span>
+          {% elif item.percobaan_siswa %}
+            <a class="btn btn-primary w-100 mt-3" href="{% url 'kerjakan_ujian_esai' item.pk %}"><i data-lucide="play"></i>Lanjutkan Ujian</a>
+          {% elif item.sedang_berlangsung and item.jumlah_soal %}
+            <button class="btn btn-primary w-100 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#startExamModal{{ item.pk }}"><i data-lucide="play"></i>Mulai Ujian</button><div class="modal fade" id="startExamModal{{ item.pk }}" tabindex="-1" aria-labelledby="startExamTitle{{ item.pk }}" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="startExamTitle{{ item.pk }}">Mulai Ujian?</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="mb-2">Waktu {{ item.durasi_menit }} menit mulai berjalan setelah tombol konfirmasi diklik.</p><small class="text-secondary">Sesi tetap berakhir paling lambat {{ item.waktu_selesai|date:'d M Y, H:i' }}.</small>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button><form method="post" action="{% url 'mulai_ujian_esai' item.pk %}">
+                      {% csrf_token %}<button class="btn btn-primary" type="submit"><i data-lucide="play"></i>Ya, Mulai Ujian</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% elif item.sedang_berlangsung %}
+            <span class="exam-unavailable"><i data-lucide="list-x"></i>Soal belum tersedia</span>
+          {% elif not item.sudah_mulai %}
+            <span class="exam-unavailable"><i data-lucide="clock-3"></i>Belum dimulai</span>
+          {% else %}
+            <span class="exam-unavailable"><i data-lucide="lock-keyhole"></i>Waktu ujian selesai</span>
+          {% endif %}
+        {% endif %}
+      </article>
+    {% empty %}
+      <div class="empty-state">
+        <i data-lucide="file-check-2"></i><p>Belum ada ujian yang tersedia.</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

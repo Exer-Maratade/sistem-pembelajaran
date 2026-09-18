@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+  Mata Pelajaran | LMS Presisi
+{% endblock %}
+{% block content %}
+  <header class="page-heading heading-with-action">
+    <div>
+      <p class="eyebrow">KURIKULUM</p><h1>Daftar Mata Pelajaran</h1><p>Kelola mata pelajaran dan beberapa Gadik pengajar dalam setiap kurikulum.</p>
+    </div>
+    <a class="btn btn-primary px-4 py-2" href="{% url 'tambah_mata_pelajaran' %}"><i data-lucide="plus"></i>Tambah Mata Pelajaran</a>
+  </header>
+
+  <div class="card border-0 shadow-sm overflow-hidden">
+    <div class="card-header bg-white border-bottom p-3">
+      <form method="get" class="input-group ms-auto" style="max-width: 520px;">
+        <span class="input-group-text bg-white"><i data-lucide="search"></i></span>
+        <input class="form-control" type="search" name="q" value="{{ pencarian }}" placeholder="Cari nama mata pelajaran" aria-label="Cari nama mata pelajaran" />
+        <button class="btn btn-primary px-4" type="submit">Cari</button>
+        {% if pencarian %}
+          <a class="btn btn-outline-secondary" href="{% url 'daftar_mata_pelajaran' %}">Reset</a>
+        {% endif %}
+      </form>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th class="ps-4">Kode Mapel</th>
+            <th class="ps-4">Mata Pelajaran</th>
+            <th>Kurikulum</th>
+            <th>Gadik Pengajar</th>
+            <th>Modul</th>
+            <th class="text-end pe-4">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in mapel %}
+            <tr>
+              <td class="ps-4">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="subject-code">{{ item.kode_mapel }}</span>
+                </div>
+              </td>
+              <td class="ps-4">
+                <div class="d-flex align-items-center gap-3">
+                    <strong>{{ item.nama_mapel }}</strong>
+                </div>
+              </td>
+              <td>
+                <strong class="small d-block">{{ item.kurikulum.nama_kurikulum }}</strong><span class="small text-secondary">{{ item.kurikulum.tahun_ajaran }}</span>
+              </td>
+              <td>
+                <div class="d-flex flex-wrap gap-1">
+                  {% for gadik in item.gadik_pengajar.all %}
+                    <span class="badge teacher-badge rounded-pill">{{ gadik.display_name }}</span>
+                  {% empty %}
+                    <span class="small text-secondary">Belum ditugaskan</span>
+                  {% endfor %}
+                </div>
+              </td>
+              <td>
+                <div class="d-grid gap-1">
+                  {% for modul in item.modul_tersedia %}
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="small text-truncate" style="max-width: 160px;" title="{{ modul.judul }}">{{ modul.judul }}</span><a class="btn btn-outline-secondary btn-sm" href="{{ modul.file_modul.url }}" target="_blank" rel="noopener" title="Buka file {{ modul.judul }}"><i data-lucide="external-link"></i><span class="visually-hidden">Buka Modul</span></a>
+                    </div>
+                  {% empty %}
+                    <span class="small text-secondary">Belum ada modul</span>
+                  {% endfor %}
+                </div>
+              </td>
+              <td class="text-end pe-4">
+                <a class="btn btn-outline-success btn-sm text-nowrap" href="{% url 'tambah_modul_admin' %}?mapel={{ item.pk }}"><i data-lucide="file-plus-2"></i>Tambah Modul</a>
+              </td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="5">
+                <div class="empty-state compact">
+                  <i data-lucide="library-big"></i>{% if pencarian %}
+                    <h3>Mata pelajaran tidak ditemukan</h3><p>Tidak ada nama mata pelajaran yang cocok dengan “{{ pencarian }}”.</p>
+                  {% else %}
+                    <h3>Belum ada mata pelajaran</h3><p>Tambahkan mata pelajaran pertama untuk kurikulum aktif.</p>
+                  {% endif %}
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

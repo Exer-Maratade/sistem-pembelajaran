@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masuk | LMS Presisi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+  </head>
+  <body class="login-page">
+    <main class="login-shell">
+      <section class="login-identity">
+        <div class="identity-inner">
+          <span class="identity-mark"><i data-lucide="shield-check"></i></span>
+          <p class="eyebrow">SISTEM PEMBELAJARAN TERPADU</p>
+          <h1>Belajar terarah.<br />Bergerak presisi.</h1>
+          <p class="identity-copy">Ruang digital untuk kurikulum, materi, penugasan, dan evaluasi pendidikan yang terhubung.</p>
+          <div class="identity-rule">
+            <span></span><small>AMAN &bull; TERUKUR &bull; TERINTEGRASI</small>
+          </div>
+        </div>
+      </section>
+      <section class="login-form-side">
+        <form method="post" class="login-form">
+          {% csrf_token %}
+          <div class="d-flex align-items-center gap-3 mb-5 d-lg-none">
+            <span class="brand-mark"><i data-lucide="shield-check"></i></span><strong>LMS Presisi</strong>
+          </div>
+          <p class="eyebrow text-success">PORTAL PENGGUNA</p>
+          <h2>Selamat datang kembali</h2>
+          <p class="text-secondary mb-4">Masukkan akun yang telah terdaftar untuk melanjutkan.</p>
+          {% if form.errors %}
+            <div class="alert alert-danger">Nama pengguna atau kata sandi tidak sesuai.</div>
+          {% endif %}
+          <div class="mb-3">
+            <label for="id_username" class="form-label">NRP</label>
+            <div class="input-icon">
+              <i data-lucide="user"></i>
+              <input type="text" name="username" autofocus autocomplete="username" required id="id_username" class="form-control" placeholder="Masukkan nama pengguna" />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="id_password" class="form-label">Kata sandi</label>
+            <div class="input-icon">
+              <i data-lucide="lock-keyhole"></i><input type="password" name="password" autocomplete="current-password" required id="id_password" class="form-control" placeholder="Masukkan kata sandi" />
+            </div>
+          </div>
+          {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+          {% endif %}
+          <button class="btn btn-primary btn-lg w-100" type="submit">Masuk ke LMS <i data-lucide="arrow-right"></i></button>
+          <p class="login-help">Hubungi administrator lembaga jika mengalami kendala akses.</p>
+        </form>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons()
+    </script>
+  </body>
+</html>

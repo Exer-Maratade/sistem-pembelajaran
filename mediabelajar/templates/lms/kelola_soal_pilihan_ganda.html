@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Soal Pilihan Ganda | LMS Presisi{% endblock %}
+{% block content %}
+<a class="back-link" href="{% url 'daftar_ujian' %}"><i data-lucide="arrow-left"></i>Kembali ke daftar ujian</a>
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">BANK SOAL PILIHAN GANDA</p><h1>{{ ujian.judul }}</h1><p>{{ ujian.mapel.nama_mapel }} &bull; {{ ujian.kelas }} &bull; {{ ujian.durasi_menit }} menit</p></div>
+    <span class="exam-method"><i data-lucide="list-checks"></i>Pilihan Ganda</span>
+</header>
+<div class="essay-builder">
+    <form method="post" class="form-panel essay-question-form" id="multipleChoiceQuestionForm">
+        {% csrf_token %}
+        <div class="exam-form-heading"><span>+</span><div><h2>Input soal baru</h2><p>Tentukan pertanyaan, jumlah opsi, dan satu kunci jawaban.</p></div></div>
+        {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+        <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="{{ form.urutan.id_for_label }}">{{ form.urutan.label }}</label>{{ form.urutan }}{% for error in form.urutan.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            <div class="col-md-6"><label class="form-label" for="{{ form.jumlah_opsi.id_for_label }}">{{ form.jumlah_opsi.label }}</label>{{ form.jumlah_opsi }}<div class="form-text">Pilih 2 sampai 8 opsi.</div>{% for error in form.jumlah_opsi.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            <div class="col-12"><label class="form-label" for="{{ form.pertanyaan.id_for_label }}">{{ form.pertanyaan.label }}</label>{{ form.pertanyaan }}{% for error in form.pertanyaan.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+            <div class="col-12">
+                <label class="form-label">Opsi jawaban</label>
+                {% for field in form %}
+                    {% if field.name|slice:':5' == 'opsi_' %}
+                    <div class="multiple-choice-option mb-3" data-option-number="{{ field.name|slice:'5:' }}">
+                        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        {% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-12"><label class="form-label" for="{{ form.kunci_jawaban.id_for_label }}">{{ form.kunci_jawaban.label }}</label>{{ form.kunci_jawaban }}<div class="form-text">Pilih opsi yang menjadi jawaban benar.</div>{% for error in form.kunci_jawaban.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit"><i data-lucide="plus"></i>Tambahkan soal</button></div>
+    </form>
+    <section class="essay-question-list">
+        <div class="section-title"><div><p class="eyebrow">SOAL TERSIMPAN</p><h2>{{ soal|length }} soal pilihan ganda</h2></div></div>
+        {% for item in soal %}
+        <article class="essay-question-card">
+            <div class="essay-question-number">{{ item.urutan }}</div>
+            <div class="essay-question-content">
+                <div class="essay-question-meta"><span>Nilai dibagi rata dari total 100</span></div>
+                <h3>{{ item.pertanyaan }}</h3>
+                <div class="answer-key"><small>OPSI JAWABAN</small>{% for opsi in item.opsi.all %}<p>{% if opsi.is_kunci %}<strong>{{ opsi.urutan }}. {{ opsi.teks }} (Kunci)</strong>{% else %}{{ opsi.urutan }}. {{ opsi.teks }}{% endif %}</p>{% endfor %}</div>
+            </div>
+            <form method="post" action="{% url 'hapus_soal_pilihan_ganda' ujian.pk item.pk %}">
+                {% csrf_token %}<button class="icon-button bordered text-danger" type="submit" title="Hapus soal" aria-label="Hapus soal {{ item.urutan }}"><i data-lucide="trash-2"></i></button>
+            </form>
+        </article>
+        {% empty %}
+        <div class="empty-state"><i data-lucide="list-plus"></i><p>Belum ada soal. Gunakan form untuk menambahkan soal pertama.</p></div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const optionCountInput = document.getElementById('id_jumlah_opsi');
+const answerKeySelect = document.getElementById('id_kunci_jawaban');
+const syncMultipleChoiceOptions = () => {
+    const count = Math.max(2, Math.min(8, Number(optionCountInput.value || 4)));
+    document.querySelectorAll('[data-option-number]').forEach((item) => {
+        item.hidden = Number(item.dataset.optionNumber) > count;
+    });
+    const selectedValue = answerKeySelect.value;
+    answerKeySelect.innerHTML = '';
+    for (let optionNumber = 1; optionNumber <= count; optionNumber += 1) {
+        const option = document.createElement('option');
+        option.value = String(optionNumber);
+        option.textContent = `Opsi ${optionNumber}`;
+        answerKeySelect.appendChild(option);
+    }
+    answerKeySelect.value = Number(selectedValue) <= count ? selectedValue : '1';
+};
+optionCountInput.addEventListener('input', syncMultipleChoiceOptions);
+syncMultipleChoiceOptions();
+</script>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}Kerjakan {{ ujian.judul }} | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">UJIAN PILIHAN GANDA</p><h1>{{ ujian.judul }}</h1><p>{{ ujian.mapel.nama_mapel }} &bull; {{ ujian.kelas }}</p></div>
+    <div class="exam-running-time"><i data-lucide="timer"></i><span><small>SISA WAKTU</small><strong id="examCountdown" data-deadline="{{ percobaan.batas_waktu|date:'c' }}">--:--:--</strong><small>Batas sesi {{ percobaan.batas_waktu|date:'d M Y, H:i' }}</small></span></div>
+</header>
+<div class="exam-instruction"><i data-lucide="info"></i><div><strong>Petunjuk ujian</strong><p>{{ ujian.instruksi }}</p></div></div>
+<div class="exam-workspace">
+<form method="post" class="essay-answer-form" data-exam-answer-form data-draft-key="exam-draft-{{ user.pk }}-{{ ujian.pk }}">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+    {% for item, field in soal_dan_field %}
+    <article class="essay-answer-card" id="question{{ item.pk }}">
+        <div class="essay-question-number">{{ item.urutan }}</div>
+        <div class="essay-answer-content">
+            <h2>{{ item.pertanyaan }}</h2>
+            <div class="exam-question-checks">
+                {% for radio in field %}
+                <label>{{ radio.tag }}<span><strong>{{ radio.choice_label }}</strong><small>Pilih jawaban ini</small></span></label>
+                {% endfor %}
+            </div>
+            {% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+        </div>
+    </article>
+    {% endfor %}
+    <div class="exam-submit-bar"><span data-submit-hint><i data-lucide="shield-check"></i>Lengkapi semua jawaban sebelum mengumpulkan ujian.</span><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#submitExamConfirmModal" data-open-submit-modal disabled><i data-lucide="send"></i>Kumpulkan Ujian</button></div>
+    <div class="modal fade" id="submitExamConfirmModal" tabindex="-1" aria-labelledby="submitExamConfirmTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header"><h2 class="modal-title fs-5" id="submitExamConfirmTitle">Konfirmasi Pengumpulan Ujian</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><p class="mb-2">Apakah Anda yakin ingin mengumpulkan ujian ini?</p><small class="text-secondary">Jawaban yang sudah dikumpulkan tidak dapat diubah atau dikirim ulang.</small></div><div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Periksa Kembali</button><button class="btn btn-primary" type="submit"><i data-lucide="send"></i>Ya, Kumpulkan</button></div></div></div>
+    </div>
+</form>
+<aside class="exam-progress-map" data-question-map>
+    <div><strong>Peta soal</strong><small><span data-answered-count>0</span> dari <span data-total-count>{{ form|length }}</span> soal terisi</small></div>
+    <div class="exam-progress-items">
+        {% for item, field in soal_dan_field %}<a href="#question{{ item.pk }}" data-question-status="{{ field.name }}">{{ item.urutan }}</a>{% endfor %}
+    </div>
+</aside>
+</div>
+{% endblock %}
+{% block scripts %}<script>const countdown = document.getElementById('examCountdown'); const deadline = new Date(countdown.dataset.deadline).getTime(); const tick = () => { const remaining = deadline - Date.now(); if (remaining <= 0) { countdown.textContent = 'Waktu habis'; window.location.reload(); return; } const total = Math.floor(remaining / 1000); const hours = String(Math.floor(total / 3600)).padStart(2, '0'); const minutes = String(Math.floor(total % 3600 / 60)).padStart(2, '0'); const seconds = String(total % 60).padStart(2, '0'); countdown.textContent = `${hours}:${minutes}:${seconds}`; setTimeout(tick, 1000); }; tick();
+const answerForm = document.querySelector('[data-exam-answer-form]');
+const statusItems = [...document.querySelectorAll('[data-question-status]')];
+const answeredCount = document.querySelector('[data-answered-count]');
+const submitButton = document.querySelector('[data-open-submit-modal]');
+const submitHint = document.querySelector('[data-submit-hint]');
+const draftKey = answerForm.dataset.draftKey;
+const answerFields = [...answerForm.querySelectorAll('textarea, input[type="radio"]')];
+const getDraft = () => {
+    try { return JSON.parse(localStorage.getItem(draftKey) || '{}'); } catch { return {}; }
+};
+const saveDraft = () => {
+    const draft = {};
+    answerFields.forEach((field) => {
+        if (field.type === 'radio') {
+            if (field.checked) draft[field.name] = field.value;
+        } else {
+            draft[field.name] = field.value;
+        }
+    });
+    localStorage.setItem(draftKey, JSON.stringify(draft));
+};
+const restoreDraft = () => {
+    const draft = getDraft();
+    answerFields.forEach((field) => {
+        if (!(field.name in draft)) return;
+        if (field.type === 'radio') {
+            field.checked = field.value === String(draft[field.name]);
+        } else if (!field.value) {
+            field.value = draft[field.name];
+        }
+    });
+};
+const questionFilled = (fieldName) => {
+    const fields = [...answerForm.querySelectorAll(`[name="${fieldName}"]`)];
+    return fields.some((field) => field.type === 'radio' ? field.checked : field.value.trim().length > 0);
+};
+const syncExamProgress = () => {
+    let filledCount = 0;
+    statusItems.forEach((item) => {
+        const filled = questionFilled(item.dataset.questionStatus);
+        item.classList.toggle('is-answered', filled);
+        item.classList.toggle('is-empty', !filled);
+        item.title = filled ? 'Terisi' : 'Belum terisi';
+        if (filled) filledCount += 1;
+    });
+    answeredCount.textContent = filledCount;
+    const complete = filledCount === statusItems.length;
+    submitButton.disabled = !complete;
+    submitHint.innerHTML = complete ? '<i data-lucide="shield-check"></i>Semua jawaban sudah terisi. Ujian siap dikumpulkan.' : '<i data-lucide="shield-check"></i>Lengkapi semua jawaban sebelum mengumpulkan ujian.';
+    if (window.lucide) lucide.createIcons();
+};
+restoreDraft();
+answerForm.addEventListener('input', saveDraft);
+answerForm.addEventListener('change', saveDraft);
+answerForm.addEventListener('input', syncExamProgress);
+answerForm.addEventListener('change', syncExamProgress);
+syncExamProgress();</script>{% endblock %}

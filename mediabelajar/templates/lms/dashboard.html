@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">{{ user.get_role_display|upper }}</p><h1>Selamat datang, {{ user.display_name }}</h1><p>Berikut ringkasan aktivitas pembelajaran Anda.</p></div>
+    <div class="date-chip"><i data-lucide="calendar-days"></i>{% now "l, d F Y" %}</div>
+</header>
+
+<section class="metric-grid">
+    <article class="metric"><span class="metric-icon green"><i data-lucide="school"></i></span><div><small>KELAS AKTIF</small><strong>{{ jumlah_kelas }}</strong></div></article>
+    <article class="metric"><span class="metric-icon blue"><i data-lucide="book-open-text"></i></span><div><small>MODUL TERSEDIA</small><strong>{{ jumlah_modul }}</strong></div></article>
+    <article class="metric"><span class="metric-icon amber"><i data-lucide="clipboard-list"></i></span><div><small>TOTAL TUGAS</small><strong>{{ jumlah_tugas }}</strong></div></article>
+    {% if user.role == 'SERDIK' %}
+    <article class="metric"><span class="metric-icon red"><i data-lucide="award"></i></span><div><small>RATA-RATA NILAI</small><strong>{{ rata_nilai|default:"-" }}</strong></div></article>
+    {% elif user.role == 'GADIK' %}
+    <article class="metric"><span class="metric-icon red"><i data-lucide="circle-alert"></i></span><div><small>PERLU DINILAI</small><strong>{{ perlu_dinilai }}</strong></div></article>
+    {% else %}
+    <article class="metric"><span class="metric-icon red"><i data-lucide="users"></i></span><div><small>PENGGUNA</small><strong>{{ jumlah_pengguna }}</strong></div></article>
+    {% endif %}
+</section>
+
+{% if user.role == 'ADMIN' or user.is_superuser %}
+<section class="admin-actions-section">
+    <div class="section-title"><div><p class="eyebrow">PENGELOLAAN SISTEM</p><h2>Aksi cepat Admin</h2></div><a href="{% url 'pengelolaan_admin' %}">Buka pusat pengelolaan <i data-lucide="arrow-right"></i></a></div>
+    <div class="admin-action-grid">
+        <a href="{% url 'tambah_kurikulum' %}" class="admin-action"><span class="metric-icon green"><i data-lucide="book-copy"></i></span><span><strong>Tambah Kurikulum</strong><small>Atur program dan tahun ajaran</small></span><i data-lucide="plus"></i></a>
+        <a href="{% url 'tambah_kelas' %}" class="admin-action"><span class="metric-icon blue"><i data-lucide="school"></i></span><span><strong>Tambah Kelas</strong><small>Hubungkan kurikulum dan Gadik</small></span><i data-lucide="plus"></i></a>
+        <a href="{% url 'tambah_gadik' %}" class="admin-action"><span class="metric-icon amber"><i data-lucide="user-plus"></i></span><span><strong>Tambah Gadik</strong><small>Buat akun tenaga pendidik</small></span><i data-lucide="plus"></i></a>
+    </div>
+</section>
+{% endif %}
+
+<div class="dashboard-grid">
+    <section>
+        <div class="section-title"><div><p class="eyebrow">RUANG BELAJAR</p><h2>Kelas Anda</h2></div><a href="{% url 'daftar_kelas' %}">Lihat semua <i data-lucide="arrow-right"></i></a></div>
+        <div class="class-grid">
+            {% for item in kelas %}
+            <a class="class-card" href="{% url 'detail_kelas' item.pk %}">
+                <span class="class-code">{{ item.nama_kelas|slice:":2"|upper }}</span>
+                <div><small>{{ item.kurikulum.tahun_ajaran }}</small><h3>{{ item.nama_kelas }}</h3><p>{{ item.kurikulum.nama_kurikulum }}</p></div>
+                <i data-lucide="arrow-up-right" class="class-arrow"></i>
+            </a>
+            {% empty %}<div class="empty-state"><i data-lucide="school"></i><p>Belum ada kelas yang terhubung dengan akun Anda.</p></div>{% endfor %}
+        </div>
+    </section>
+    <section class="schedule-panel">
+        <div class="section-title"><div><p class="eyebrow">AGENDA</p><h2>Tenggat terdekat</h2></div></div>
+        <div class="schedule-list">
+            {% for tugas in tugas_terdekat %}
+            <a href="{% url 'detail_tugas' tugas.pk %}" class="schedule-item">
+                <span class="deadline-date"><strong>{{ tugas.deadline|date:"d" }}</strong><small>{{ tugas.deadline|date:"M"|upper }}</small></span>
+                <span><strong>{{ tugas.judul_tugas }}</strong><small>{{ tugas.kelas }} &bull; {{ tugas.mapel.kode_mapel }} - {{ tugas.mapel.nama_mapel }} &bull; {{ tugas.gadik.display_name }}</small></span>
+                <i data-lucide="chevron-right"></i>
+            </a>
+            {% empty %}<div class="empty-state compact"><i data-lucide="calendar-check"></i><p>Belum ada tenggat tugas.</p></div>{% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

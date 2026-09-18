@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}{% if user.role == 'ADMIN' or user.is_superuser %}Rekap Nilai{% else %}Nilai Saya{% endif %} | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading"><p class="eyebrow">HASIL BELAJAR</p><h1>{% if user.role == 'ADMIN' or user.is_superuser %}Rekap Nilai{% else %}Nilai Saya{% endif %}</h1><p>{% if user.role == 'ADMIN' or user.is_superuser %}Seluruh nilai tugas dan ujian Serdik dalam sistem.{% else %}Rekap pengumpulan, nilai, dan umpan balik dari Gadik.{% endif %}</p></header>
+<div class="grade-tables">
+	<section class="grade-table-panel">
+		<div class="grade-table-heading"><span><i data-lucide="clipboard-check"></i></span><div><h2>Nilai Tugas</h2><p>{{ pengumpulan|length }} tugas dikumpulkan</p></div></div>
+		<div class="table-shell"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Tugas</th><th>Status</th><th>Nilai</th><th>Gadik Penilai / Umpan Balik</th></tr></thead><tbody>
+		{% for item in pengumpulan %}<tr><td><a href="{% url 'detail_tugas' item.tugas_id %}"><strong>{{ item.tugas.judul_tugas }}</strong></a><small>{% if user.role == 'ADMIN' or user.is_superuser %}{{ item.serdik.display_name }} &bull; {% endif %}{{ item.tugas.mapel.nama_mapel }} &bull; {{ item.tugas.kelas }}</small></td><td><span class="status-badge status-{{ item.status|lower }}">{{ item.get_status_display }}</span></td><td><span class="grade-cell">{{ item.nilai|default_if_none:"-" }}</span></td><td><strong>{{ item.dinilai_oleh.display_name|default:"-" }}</strong><small>{{ item.catatan_gadik|default:"Belum ada umpan balik"|truncatewords:8 }}</small></td></tr>
+		{% empty %}<tr><td colspan="4"><div class="empty-state compact"><i data-lucide="clipboard-x"></i><p>Belum ada tugas yang dikumpulkan.</p></div></td></tr>{% endfor %}
+		</tbody></table></div></div>
+	</section>
+	<section class="grade-table-panel">
+		<div class="grade-table-heading"><span><i data-lucide="file-check-2"></i></span><div><h2>Nilai Ujian</h2><p>{{ pengumpulan_ujian|length }} ujian diselesaikan</p></div></div>
+		<div class="table-shell"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Ujian</th><th>Metode</th><th>Dikumpulkan</th><th>Nilai</th></tr></thead><tbody>
+		{% for item in pengumpulan_ujian %}<tr><td><strong>{{ item.ujian.judul }}</strong><small>{% if user.role == 'ADMIN' or user.is_superuser %}{{ item.serdik.display_name }} &bull; {% endif %}{{ item.ujian.mapel.nama_mapel }} &bull; {{ item.ujian.kelas }}</small></td><td>{{ item.ujian.get_metode_display }}</td><td>{{ item.submitted_at|date:"d M Y" }}<small>{{ item.submitted_at|date:"H:i" }}</small></td><td><span class="grade-cell">{{ item.nilai|default_if_none:"-" }}</span></td></tr>
+		{% empty %}<tr><td colspan="4"><div class="empty-state compact"><i data-lucide="file-x-2"></i><p>Belum ada ujian yang diselesaikan.</p></div></td></tr>{% endfor %}
+		</tbody></table></div></div>
+	</section>
+</div>
+{% endblock %}

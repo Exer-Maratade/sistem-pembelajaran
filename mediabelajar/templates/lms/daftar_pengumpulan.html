@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Pengumpulan | LMS Presisi{% endblock %}
+{% block content %}
+<a class="back-link" href="{% url 'detail_tugas' tugas.pk %}"><i data-lucide="arrow-left"></i>Kembali ke tugas</a>
+<header class="page-heading"><p class="eyebrow">HASIL PEKERJAAN</p><h1>{{ tugas.judul_tugas }}</h1><p>{{ tugas.kelas }} &bull; Tenggat {{ tugas.deadline|date:"d F Y, H:i" }}</p></header>
+<div class="table-shell"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Serdik</th><th>Waktu kirim</th><th>Status</th><th>Nilai</th><th></th></tr></thead><tbody>
+{% for item in pengumpulan %}<tr><td><strong>{{ item.serdik.display_name }}</strong><small>{{ item.serdik.nip_nrp|default:item.serdik.username }}</small></td><td>{{ item.submitted_at|date:"d M Y, H:i" }}</td><td><span class="status-badge status-{{ item.status|lower }}">{{ item.get_status_display }}</span></td><td><strong>{{ item.nilai|default_if_none:"-" }}</strong></td><td class="text-end"><a class="btn btn-outline-success btn-sm" href="{{ item.file_tugas.url }}" target="_blank" rel="noopener"><i data-lucide="eye"></i>Lihat Tugas</a> <a class="btn btn-outline-secondary btn-sm" href="{{ item.file_tugas.url }}" download title="Unduh tugas"><i data-lucide="download"></i><span class="visually-hidden">Unduh tugas</span></a> <a class="btn btn-primary btn-sm" href="{% url 'nilai_pengumpulan' item.pk %}">Nilai</a></td></tr>{% endfor %}
+{% if belum_mengumpulkan %}<tr class="table-light"><td colspan="5"><strong>Belum Mengumpulkan</strong><small class="d-inline ms-2 text-secondary">{{ belum_mengumpulkan|length }} siswa</small></td></tr>{% endif %}
+{% for anggota in belum_mengumpulkan %}<tr><td><strong>{{ anggota.serdik.display_name }}</strong><small>{{ anggota.serdik.nip_nrp|default:anggota.serdik.username }}</small></td><td>-</td><td><span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Belum Mengumpulkan</span></td><td><strong>-</strong></td><td></td></tr>{% empty %}{% if not pengumpulan %}<tr><td colspan="5"><div class="empty-state compact"><i data-lucide="users"></i><p>Belum ada siswa di kelas ini.</p></div></td></tr>{% endif %}{% endfor %}
+</tbody></table></div></div>
+{% endblock %}

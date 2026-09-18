@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block title %}
+Pusat Pengelolaan | LMS Presisi
+{% endblock %}
+{% block content %}
+<header class="page-heading heading-with-action">
+    <div>
+        <p class="eyebrow">ADMINISTRASI</p>
+        <h1>Pusat Pengelolaan</h1>
+        <p>Kelola struktur pembelajaran dan tenaga pendidik dari satu tempat.</p>
+    </div>
+    <a class="btn btn-outline-secondary" href="{% url 'admin:index' %}"><i data-lucide="settings-2"></i>Administrasi
+        lanjutan</a>
+</header>
+
+<section class="admin-action-grid admin-action-grid-large">
+    <a href="{% url 'tambah_kurikulum' %}" class="admin-action"><span class="metric-icon green"><i
+                data-lucide="book-copy"></i></span><span><small>{{ jumlah_kurikulum }}
+                DATA</small><strong>Kurikulum</strong><small>Tambah kurikulum aktif</small></span><i
+            data-lucide="plus"></i></a>
+    <a href="{% url 'tambah_kelas' %}" class="admin-action"><span class="metric-icon blue"><i
+                data-lucide="school"></i></span><span><small>{{ jumlah_kelas }}
+                DATA</small><strong>Kelas</strong><small>Buat rombongan belajar</small></span><i
+            data-lucide="plus"></i></a>
+    <a href="{% url 'daftar_mata_pelajaran' %}" class="admin-action"><span class="metric-icon green"><i
+                data-lucide="library-big"></i></span><span><small>{{ jumlah_mapel }} DATA</small><strong>Mata
+                Pelajaran</strong><small>Atur mapel dan Gadik pengajar</small></span><i
+            data-lucide="arrow-up-right"></i></a>
+    <a href="{% url 'daftar_gadik' %}" class="admin-action"><span class="metric-icon amber"><i
+                data-lucide="users-round"></i></span><span><small>{{ jumlah_gadik }}
+                DATA</small><strong>Gadik</strong><small>Lihat dan tambah tenaga pendidik</small></span><i
+            data-lucide="arrow-up-right"></i></a>
+</section>
+
+<div class="management-grid">
+    <section class="management-section">
+        <div class="tabs-heading">
+            <h2>Kurikulum terbaru</h2>
+        </div>
+        <div class="management-list">
+            {% for item in kurikulum %}
+            <div>
+                <span><strong>{{ item.nama_kurikulum }}</strong><small>{{ item.tahun_ajaran }}</small></span><span
+                    class="status-badge {% if item.is_active %}
+                
+                status-dinilai
+
+              {% else %}
+                
+                status-terlambat
+
+              {% endif %}">
+                    {% if item.is_active %}
+                    Aktif
+                    {% else %}
+                    Nonaktif
+                    {% endif %}
+                </span>
+            </div>
+            {% empty %}
+            <p>Belum ada kurikulum.</p>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="management-section">
+        <div class="tabs-heading">
+            <h2>Kelas terbaru</h2>
+        </div>
+        <div class="management-list">
+            {% for item in kelas %}
+            <a href="{% url 'detail_kelas' item.pk %}"><span><strong>{{ item.nama_kelas }}</strong><small>{{
+                        item.kurikulum.nama_kurikulum }}</small></span><small>{{
+                    item.gadik_pembina.display_name|default:'Belum ada Gadik' }}</small></a>
+            {% empty %}
+            <p>Belum ada kelas.</p>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="management-section">
+        <div class="tabs-heading justify-content-between">
+            <h2>Mata Pelajaran</h2><a class="btn btn-sm btn-outline-success"
+                href="{% url 'daftar_mata_pelajaran' %}">Lihat semua</a>
+        </div>
+        <div class="management-list">
+            {% for item in mapel %}
+            <div>
+                <span><strong>{{ item.kode_mapel }} - {{ item.nama_mapel }}</strong><small>{{
+                        item.kurikulum.nama_kurikulum }}</small></span><small>{{ item.gadik_pengajar.count }}
+                    Gadik</small>
+            </div>
+            {% empty %}
+            <p>Belum ada mata pelajaran.</p>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="management-section">
+        <div class="tabs-heading justify-content-between">
+            <h2>Daftar Gadik</h2><a class="btn btn-sm btn-outline-success" href="{% url 'daftar_gadik' %}">Lihat
+                semua</a>
+        </div>
+        <div class="management-list">
+            {% for item in gadik %}
+            <div>
+                <span><strong>{{ item.display_name }}</strong><small>{{ item.nip_nrp }}</small></span><small>{{
+                    item.email|default:'-' }}</small>
+            </div>
+            {% empty %}
+            <p>Belum ada Gadik.</p>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="management-section">
+        <div class="tabs-heading">
+            <h2>Modul berdasarkan Mata Pelajaran</h2>
+        </div>
+        <div class="management-list">
+            {% for item in modul %}
+            <a href="{{ item.file_modul.url }}" target="_blank" rel="noopener"><span><strong>{{ item.judul
+                        }}</strong><small>{{ item.mapel.kode_mapel }} &bull; {{ item.mapel.nama_mapel
+                        }}</small></span><i data-lucide="external-link"></i></a>
+            {% empty %}
+            <p>Belum ada modul.</p>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

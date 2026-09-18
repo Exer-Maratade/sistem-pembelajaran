@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Siswa {{ kelas.nama_kelas }} | LMS Presisi{% endblock %}
+{% block content %}
+<a class="back-link" href="{% url 'daftar_kelas' %}"><i data-lucide="arrow-left"></i>Kembali ke daftar kelas</a>
+<header class="page-heading"><p class="eyebrow">ANGGOTA KELAS</p><h1>{{ kelas.nama_kelas }}</h1><p>{{ kelas.kurikulum.nama_kurikulum }} &bull; {{ kelas.kurikulum.tahun_ajaran }}</p></header>
+
+<div class="card border-0 shadow-sm mb-4">
+    <form method="post" class="card-body p-4">
+        {% csrf_token %}
+        <label class="form-label fw-bold" for="{{ form.siswa.id_for_label }}">Pilih siswa yang belum memiliki kelas</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-white"><i data-lucide="search"></i></span>
+            <input class="form-control" id="student-picker-search" type="search" placeholder="Cari NOSIS atau nama siswa" aria-label="Cari siswa yang akan ditambahkan" autocomplete="off">
+            <span class="input-group-text bg-white text-secondary" id="student-picker-count" aria-live="polite"></span>
+        </div>
+        <div class="checkbox-grid student-checkbox-grid">{{ form.siswa }}</div>
+        <div class="small text-secondary py-3 text-center d-none" id="student-picker-empty">Siswa tidak ditemukan.</div>
+        {% if form.siswa.help_text %}<div class="form-text">{{ form.siswa.help_text }}</div>{% endif %}
+        {% for error in form.siswa.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+        <button class="btn btn-primary mt-3" type="submit"><i data-lucide="user-plus"></i>Tambahkan Siswa</button>
+    </form>
+</div>
+
+<div class="card border-0 shadow-sm overflow-hidden">
+    <div class="card-header bg-white border-bottom p-3">
+        <form method="get" class="input-group ms-auto" style="max-width: 520px;">
+            <span class="input-group-text bg-white"><i data-lucide="search"></i></span>
+            <input class="form-control" type="search" name="q" value="{{ pencarian }}" placeholder="Cari nama siswa" aria-label="Cari nama siswa">
+            <button class="btn btn-primary" type="submit">Cari</button>
+            {% if pencarian %}<a class="btn btn-outline-secondary" href="{% url 'kelola_anggota_kelas' kelas.pk %}">Reset</a>{% endif %}
+        </form>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light"><tr><th class="ps-4">NOSIS</th><th>Nama Lengkap</th><th>Asal Pengiriman</th><th class="text-end pe-4">Aksi</th></tr></thead>
+            <tbody>{% for item in anggota %}<tr>
+                <td class="ps-4 font-monospace">{{ item.serdik.nip_nrp|default:"-" }}</td>
+                <td><strong>{{ item.serdik.display_name }}</strong></td>
+                <td>{{ item.serdik.asal_pengiriman|default:"-" }}</td>
+                <td class="text-end pe-4"><form method="post" action="{% url 'hapus_anggota_kelas' kelas.pk item.pk %}" onsubmit="return confirm('Keluarkan siswa ini dari kelas?')">{% csrf_token %}<button class="btn btn-outline-danger btn-sm" type="submit"><i data-lucide="user-minus"></i>Hapus</button></form></td>
+            </tr>{% empty %}<tr><td colspan="4"><div class="empty-state compact"><i data-lucide="users"></i><p>{% if pencarian %}Siswa tidak ditemukan.{% else %}Belum ada siswa di kelas ini.{% endif %}</p></div></td></tr>{% endfor %}</tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    const studentSearch = document.getElementById("student-picker-search");
+    const studentOptions = Array.from(document.querySelectorAll("#id_siswa > div"));
+    const studentCount = document.getElementById("student-picker-count");
+    const studentEmpty = document.getElementById("student-picker-empty");
+
+    function filterStudents() {
+        const query = studentSearch.value.trim().toLocaleLowerCase("id");
+        let visibleCount = 0;
+        studentOptions.forEach((option) => {
+            const isVisible = option.textContent.toLocaleLowerCase("id").includes(query);
+            option.classList.toggle("d-none", !isVisible);
+            visibleCount += Number(isVisible);
+        });
+        studentCount.textContent = `${visibleCount} siswa`;
+        studentEmpty.classList.toggle("d-none", visibleCount > 0);
+    }
+
+    studentSearch.addEventListener("input", filterStudents);
+    filterStudents();
+</script>
+{% endblock %}

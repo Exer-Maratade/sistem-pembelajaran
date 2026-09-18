@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Daftar Siswa | LMS Presisi{% endblock %}
+{% block content %}
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">PESERTA DIDIK</p><h1>Daftar Siswa</h1><p>Data siswa yang terdaftar dalam sistem pembelajaran.</p></div>
+    <a class="btn btn-primary px-4 py-2" href="{% url 'tambah_siswa' %}"><i data-lucide="user-plus"></i>Tambah Siswa</a>
+</header>
+<div class="card border-0 shadow-sm overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light"><tr><th class="ps-4">NOSIS</th><th>Nama Lengkap</th><th>Tempat, Tanggal Lahir</th><th>Asal Pengiriman</th><th>Alamat</th><th>Kelas</th><th class="text-end pe-4">Aksi</th></tr></thead>
+            <tbody>{% for item in siswa %}<tr>
+                <td class="ps-4 font-monospace">{{ item.nip_nrp|default:"-" }}</td>
+                <td><strong>{{ item.display_name }}</strong></td>
+                <td>{{ item.tempat_lahir|default:"-" }}{% if item.tanggal_lahir %}, {{ item.tanggal_lahir|date:"d M Y" }}{% endif %}</td>
+                <td>{{ item.asal_pengiriman|default:"-" }}</td>
+                <td><span title="{{ item.alamat }}">{{ item.alamat|default:"-"|truncatewords:8 }}</span></td>
+                <td>{% with keanggotaan=item.keanggotaan_kelas.all|first %}{% if keanggotaan %}<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">{{ keanggotaan.kelas.nama_kelas }}</span>{% else %}<span class="small text-secondary">Belum ada kelas</span>{% endif %}{% endwith %}</td>
+                <td class="text-end pe-4"><a class="btn btn-outline-secondary btn-sm" href="{% url 'ubah_siswa' item.pk %}"><i data-lucide="pencil"></i>Edit</a></td>
+            </tr>{% empty %}<tr><td colspan="7"><div class="empty-state compact"><i data-lucide="graduation-cap"></i><p>Belum ada siswa yang terdaftar.</p></div></td></tr>{% endfor %}</tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

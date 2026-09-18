@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ title }} | LMS Presisi
+{% endblock %}
+{% block content %}
+  <header class="page-heading">
+    <p class="eyebrow">FORMULIR</p><h1>{{ title }}</h1>{% if subtitle %}
+      <p>{{ subtitle }}</p>
+    {% elif tugas %}
+      <p>{{ tugas.judul_tugas }} &bull; {{ tugas.kelas }}</p>
+    {% endif %}
+  </header>
+  <div class="card border-0 shadow-sm form-panel p-0 overflow-hidden">
+    <div class="card-header bg-white border-bottom px-4 py-3">
+      <div class="d-flex align-items-center gap-3">
+        <span class="metric-icon green"><i data-lucide="clipboard-pen-line"></i></span><div>
+          <h2 class="h6 fw-bold mb-1">Informasi utama</h2><p class="small text-secondary mb-0">Lengkapi seluruh kolom bertanda wajib.</p>
+        </div>
+      </div>
+    </div>
+    <form method="post" enctype="multipart/form-data" class="card-body p-4 p-md-5">
+      {% csrf_token %}
+      {% if form.non_field_errors %}
+        <div class="alert alert-danger d-flex gap-2">
+          <i data-lucide="circle-alert"></i><div>{{ form.non_field_errors }}</div>
+        </div>
+      {% endif %}
+      <div class="row g-4">
+        {% for field in form %}
+          <div class="col-12 {% if field.name == 'judul' or field.name == 'nama_lengkap' or field.name == 'nama_kurikulum' %}
+              col-md-8
+            {% elif field.name == 'tahun_ajaran' or field.name == 'nip_nrp' %}
+              col-md-4
+            {% endif %}">
+            <label class="form-label" for="{{ field.id_for_label }}">
+              {{ field.label }}{% if field.field.required %}
+                <span>*</span>
+              {% endif %}
+            </label>{% if field.name == 'gadik_pengajar' or field.name == 'mata_pelajaran_diajar' %}
+              <div class="checkbox-grid">{{ field }}</div>
+            {% else %}
+              {{ field }}
+            {% endif %}
+            {% if field.help_text %}
+              <div class="form-text">{{ field.help_text|safe }}</div>
+            {% endif %}
+            {% for error in field.errors %}
+              <div class="invalid-feedback d-block">{{ error }}</div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="form-actions border-top mt-4 pt-4">
+        <button class="btn btn-primary px-4" type="submit"><i data-lucide="save"></i>{{ button_text }}</button><button class="btn btn-outline-secondary px-4" type="button" onclick="history.back()">Batal</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

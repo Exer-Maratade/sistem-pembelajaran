@@ -1,0 +1,239 @@
+================================================================================
+                    PRODUCT REQUIREMENT DOCUMENT (PRD) & ERD
+               LMS PRESISI / LMS POLRI (SISTEM PEMBELAJARAN MODERN)
+================================================================================
+
+1. INFORMASI PROYEK
+--------------------------------------------------------------------------------
+Nama Proyek  : LMS Presisi / LMS POLRI
+Platform     : Web Application (Learning Management System)
+Tech Stack   : Python 3.14, Django 6.1, SQLite / PostgreSQL, Bootstrap 5
+Ruang Lingkup: Pengelolaan Kurikulum, Kelas, Modul Belajar, Penugasan, dan 
+               Pengumpulan Tugas Berbasis Role (Admin, Gadik, Serdik).
+
+================================================================================
+2. HAK AKSES DAN HIERARKI PENGGUNA (USER ROLES & PERMISSIONS)
+--------------------------------------------------------------------------------
+Sistem memiliki 3 tingkatan pengguna utama dengan batasan hak akses sebagai berikut:
+
+[1] ADMIN (Pengelola Sistem / Staf Lembaga Pendidikan)
+    - Mengelola akun pengguna (Admin, Gadik, Serdik) dan data master.
+    - Mengelola data Kurikulum, Mata Pelajaran, dan Rombongan Belajar (Kelas).
+    - Memetakan Gadik dan Serdik ke dalam Kelas masing-masing.
+
+[2] GADIK (Tenaga Pendidik / Instruktur / Dosen)
+    - Mengunggah & mengelola Modul Belajar (PDF, Video, Link Dokumen).
+    - Membuat Tugas, menentukan instruksi, batas waktu (deadline), dan bobot.
+    - Memeriksa, memberikan masukan (feedback), serta menilai hasil pekerjaan Serdik.
+
+[3] SERDIK (Peserta Didik / Siswa)
+    - Mengakses dan mengunduh Modul Belajar sesuai Kelas dan Kurikulum aktif.
+    - Mengirimkan/mengunggah berkas Pengumpulan Tugas sebelum deadline.
+    - Melihat rekapitulasi nilai dan umpan balik dari Gadik.
+
+================================================================================
+3. MODUL FITUR UTAMA & ATURAN BISNIS (BUSINESS RULES)
+--------------------------------------------------------------------------------
+A. MODUL KURIKULUM & KELAS (ADMIN)
+   - Setiap Kelas terikat pada 1 Kurikulum aktif.
+   - Serdik hanya bisa melihat modul dan tugas di Kelas tempat ia didaftarkan.
+   - Pendaftaran Serdik ke Kelas menggunakan tabel penghubung (AnggotaKelas).
+
+B. MODUL PEMBELAJARAN / MATERI (GADIK & SERDIK)
+   - Gadik dapat mengunggah file materi dalam bentuk PDF atau lampiran lain.
+   - Modul dikelompokkan berdasarkan Mata Pelajaran dan Kelas.
+
+C. MODUL PENUGASAN & PENGUMPULAN (GADIK & SERDIK)
+   - Gadik menentukan waktu tenggat (deadline) tugas.
+   - Sistem mencatat waktu pengumpulan (submitted_at) secara otomatis.
+   - Status pengumpulan otomatis berubah: 'TERKIRIM', 'TERLAMBAT', atau 'DINILAI'.
+   - Serdik tidak bisa mengunggah ulang tugas jika nilai sudah diberikan oleh Gadik.
+
+================================================================================
+4. ENTITY RELATIONSHIP DIAGRAM (ERD) & STRUKTUR DATABASE
+--------------------------------------------------------------------------------
+
+A. VISUAL KONSEPTUAL ERD (TEXT-BASED)
+
+[ CustomUser ] ──(1:1)──► [ AbstractUser ]
+     │
+     ├──(1:N)──► [ Kurikulum ] ──(1:N)──► [ MataPelajaran ]
+     │                │                          │
+     │              (1:N)                      (1:N)
+     │                ▼                          ▼
+     ├──(1:N)──► [ Kelas ] ◄─────────────────────┘
+     │                │
+     │              (1:N)
+     │                ├────────────────────────┐
+     │                ▼                        ▼
+     ├──(1:N)──► [ ModulBelajar ]       [ Tugas ]
+     │                                     │
+     │                                   (1:N)
+     │                                     ▼
+     └──────────────────────────────► [ PengumpulanTugas ]
+
+B. DESKRIPSI STRUKTUR TABEL & RELASI
+
+1. CustomUser (Inherits AbstractUser)
+   - id           : AutoField (PK)
+   - username     : CharField(150), Unique
+   - password     : CharField(128)
+   - email        : EmailField
+   - nama_lengkap : CharField(255)
+   - nip_nrp      : CharField(30), Unique
+   - role         : CharField(10) ['ADMIN', 'GADIK', 'SERDIK']
+
+2. Kurikulum
+   - id             : AutoField (PK)
+   - nama_kurikulum : CharField(150)
+   - tahun_ajaran   : CharField(10)
+   - is_active      : BooleanField(default=True)
+
+3. MataPelajaran
+   - id           : AutoField (PK)
+   - kurikulum_id : ForeignKey -> Kurikulum
+   - kode_mapel   : CharField(20)
+   - nama_mapel   : CharField(100)
+
+4. Kelas
+   - id           : AutoField (PK)
+   - nama_kelas   : CharField(50)
+   - kurikulum_id : ForeignKey -> Kurikulum
+   - gadik_id     : ForeignKey -> CustomUser (Filter: role='GADIK')
+
+5. AnggotaKelas (Junction Table)
+   - id        : AutoField (PK)
+   - kelas_id  : ForeignKey -> Kelas
+   - serdik_id : ForeignKey -> CustomUser (Filter: role='SERDIK')
+
+6. ModulBelajar
+   - id          : AutoField (PK)
+   - kelas_id    : ForeignKey -> Kelas
+   - mapel_id    : ForeignKey -> MataPelajaran
+   - gadik_id    : ForeignKey -> CustomUser
+   - judul       : CharField(200)
+   - deskripsi   : TextField
+   - file_modul  : FileField (upload_to='modul/')
+   - created_at  : DateTimeField(auto_now_add=True)
+
+7. Tugas
+   - id            : AutoField (PK)
+   - kelas_id      : ForeignKey -> Kelas
+   - mapel_id      : ForeignKey -> MataPelajaran
+   - gadik_id      : ForeignKey -> CustomUser
+   - judul_tugas   : CharField(200)
+   - instruksi     : TextField
+   - file_lampiran : FileField (Null=True, Blank=True)
+   - deadline      : DateTimeField
+   - created_at    : DateTimeField(auto_now_add=True)
+
+8. PengumpulanTugas
+   - id             : AutoField (PK)
+   - tugas_id       : ForeignKey -> Tugas
+   - serdik_id      : ForeignKey -> CustomUser
+   - file_tugas     : FileField (upload_to='pengumpulan/')
+   - catatan_serdik : TextField (Null=True, Blank=True)
+   - submitted_at   : DateTimeField(auto_now_add=True)
+   - nilai          : DecimalField(max_digits=5, decimal_places=2, Null=True)
+   - catatan_gadik  : TextField (Null=True, Blank=True)
+   - status         : CharField ['TERKIRIM', 'TERLAMBAT', 'DINILAI']
+
+================================================================================
+5. IMPLEMENTASI DJANGO MODEL (PYTHON CODE REFERENCE)
+================================================================================
+
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+class CustomUser(AbstractUser):
+    class Role(models.TextChoices):
+        ADMIN = 'ADMIN', 'Admin'
+        GADIK = 'GADIK', 'Gadik'
+        SERDIK = 'SERDIK', 'Serdik'
+
+    nama_lengkap = models.CharField(max_length=255, null=True, blank=True)
+    nip_nrp = models.CharField(max_length=30, unique=True, null=True, blank=True)
+    role = models.CharField(max_length=10, choices=Role.choices, default=Role.SERDIK)
+
+    def __str__(self):
+        return f"{self.username} - {self.role}"
+
+class Kurikulum(models.Model):
+    nama_kurikulum = models.CharField(max_length=150)
+    tahun_ajaran = models.CharField(max_length=10)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.nama_kurikulum
+
+class MataPelajaran(models.Model):
+    kurikulum = models.ForeignKey(Kurikulum, on_delete=models.CASCADE, related_name='mapel')
+    kode_mapel = models.CharField(max_length=20)
+    nama_mapel = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.kode_mapel} - {self.nama_mapel}"
+
+class Kelas(models.Model):
+    nama_kelas = models.CharField(max_length=50)
+    kurikulum = models.ForeignKey(Kurikulum, on_delete=models.CASCADE)
+    gadik_pembina = models.ForeignKey(
+        CustomUser, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True,
+        limit_choices_to={'role': CustomUser.Role.GADIK},
+        related_name='kelas_binaan'
+    )
+
+    def __str__(self):
+        return self.nama_kelas
+
+class AnggotaKelas(models.Model):
+    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE, related_name='anggota')
+    serdik = models.ForeignKey(
+        CustomUser, 
+        on_delete=models.CASCADE, 
+        limit_choices_to={'role': CustomUser.Role.SERDIK}
+    )
+
+    class Meta:
+        unique_together = ('kelas', 'serdik')
+
+class ModulBelajar(models.Model):
+    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE)
+    mapel = models.ForeignKey(MataPelajaran, on_delete=models.CASCADE)
+    gadik = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    judul = models.CharField(max_length=200)
+    deskripsi = models.TextField()
+    file_modul = models.FileField(upload_to='modul/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class Tugas(models.Model):
+    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE)
+    mapel = models.ForeignKey(MataPelajaran, on_delete=models.CASCADE)
+    gadik = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    judul_tugas = models.CharField(max_length=200)
+    instruksi = models.TextField()
+    file_lampiran = models.FileField(upload_to='tugas/lampiran/', null=True, blank=True)
+    deadline = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class PengumpulanTugas(models.Model):
+    class Status(models.TextChoices):
+        TERKIRIM = 'TERKIRIM', 'Terkirim'
+        TERLAMBAT = 'TERLAMBAT', 'Terlambat'
+        DINILAI = 'DINILAI', 'Dinilai'
+
+    tugas = models.ForeignKey(Tugas, on_delete=models.CASCADE, related_name='submissions')
+    serdik = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    file_tugas = models.FileField(upload_to='pengumpulan/')
+    catatan_serdik = models.TextField(null=True, blank=True)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+    nilai = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    catatan_gadik = models.TextField(null=True, blank=True)
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.TERKIRIM)
+
+================================================================================
+                                 END OF FILE
+================================================================================

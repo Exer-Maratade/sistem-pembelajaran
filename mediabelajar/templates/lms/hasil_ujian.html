@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Hasil {{ ujian.judul }} | LMS Presisi{% endblock %}
+{% block content %}
+{% if not is_student_result and not show_submission_table %}
+<a class="back-link" href="{% url 'hasil_ujian' ujian.pk %}"><i data-lucide="arrow-left"></i>Kembali ke daftar hasil ujian</a>
+{% else %}
+<a class="back-link" href="{% url 'daftar_ujian' %}"><i data-lucide="arrow-left"></i>Kembali ke daftar ujian</a>
+{% endif %}
+<header class="page-heading heading-with-action">
+    <div><p class="eyebrow">HASIL UJIAN {{ ujian.get_metode_display|upper }}</p><h1>{{ ujian.judul }}</h1><p>{{ ujian.mapel.nama_mapel }} &bull; {{ ujian.kelas }} &bull; {% if is_student_result %}Evaluasi jawaban Anda{% else %}Pemeriksaan per soal{% endif %}</p></div>
+    <span class="exam-method"><i data-lucide="clipboard-check"></i>{% if is_student_result %}Hasil Saya{% elif show_submission_table %}{{ pengumpulan_rows|length }} pengumpulan{% else %}Detail hasil{% endif %}</span>
+</header>
+{% if show_submission_table %}
+<div class="table-shell"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Siswa</th><th>Dikumpulkan</th><th>Nilai</th><th>Aksi</th></tr></thead><tbody>
+    {% for item in pengumpulan_rows %}<tr><td><strong>{{ item.serdik.display_name }}</strong><small>{{ item.serdik.nip_nrp|default:item.serdik.username }}</small></td><td>{{ item.submitted_at|date:'d M Y' }}<small>{{ item.submitted_at|date:'H:i' }}</small></td><td><span class="grade-cell">{{ item.nilai|default_if_none:'-' }}</span></td><td><a class="btn btn-outline-success" href="?pengumpulan={{ item.pk }}"><i data-lucide="eye"></i>Lihat Hasil</a></td></tr>
+    {% empty %}<tr><td colspan="4"><div class="empty-state compact"><i data-lucide="clipboard-x"></i><p>Belum ada Serdik yang melaksanakan ujian.</p></div></td></tr>{% endfor %}
+</tbody></table></div></div>
+{% else %}
+<div class="exam-result-list">
+    {% for row in rows %}
+    <article class="exam-result-card">
+        <header><div class="avatar avatar-table">{{ row.pengumpulan.serdik.display_name|slice:':1'|upper }}</div><div><h2>{{ row.pengumpulan.serdik.display_name }}</h2><p>Dikumpulkan {{ row.pengumpulan.submitted_at|date:'d M Y, H:i' }} WIB</p></div><div class="exam-result-score"><small>NILAI</small><strong>{{ row.pengumpulan.nilai|default_if_none:'-' }}</strong></div></header>
+        {% if ujian.metode == 'PILIHAN_GANDA' %}
+        <div class="exam-review-answers">
+            {% for jawaban in row.jawaban %}
+            <div class="exam-review-item"><span>{{ jawaban.soal.urutan }}</span><div><strong>{{ jawaban.soal.pertanyaan }}</strong><small>{% if is_student_result %}JAWABAN ANDA{% else %}JAWABAN SERDIK{% endif %}</small><p>{{ jawaban.opsi.teks }}</p><div class="answer-key"><small>KUNCI JAWABAN</small>{% for opsi in jawaban.soal.opsi.all %}{% if opsi.is_kunci %}<p>{{ opsi.teks }}</p>{% endif %}{% endfor %}</div><em>{% if jawaban.opsi.is_kunci %}Benar{% else %}Salah{% endif %} &bull; Skor {{ jawaban.skor|default_if_none:'0' }}</em></div></div>
+            {% endfor %}
+        </div>
+        {% elif is_student_result %}
+        <div class="exam-review-answers">
+            {% for jawaban in row.jawaban %}
+            <div class="exam-review-item"><span>{{ jawaban.soal.urutan }}</span><div><strong>{{ jawaban.soal.pertanyaan }}</strong><small>JAWABAN ANDA</small><p>{{ jawaban.jawaban|linebreaksbr }}</p><div class="answer-key"><small>KUNCI / ACUAN RELEVANSI</small><p>{{ jawaban.soal.kunci_jawaban|linebreaksbr }}</p></div><em>{{ jawaban.soal.get_pemeriksaan_display }} &bull; Maksimal {{ jawaban.nilai_maksimal }} &bull; Skor {{ jawaban.skor|default_if_none:'Menunggu penilaian' }}</em></div></div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <form method="post">{% csrf_token %}<input type="hidden" name="pengumpulan" value="{{ row.pengumpulan.pk }}"><div class="exam-review-answers">
+            {% for jawaban in row.jawaban %}
+            <div class="exam-review-item"><span>{{ jawaban.soal.urutan }}</span><div><strong>{{ jawaban.soal.pertanyaan }}</strong><small>JAWABAN SERDIK</small><p>{{ jawaban.jawaban|linebreaksbr }}</p><div class="answer-key"><small>KUNCI / ACUAN RELEVANSI</small><p>{{ jawaban.soal.kunci_jawaban|linebreaksbr }}</p></div><em>{{ jawaban.soal.get_pemeriksaan_display }} &bull; Maksimal {{ jawaban.nilai_maksimal }}</em>{% if jawaban.soal.pemeriksaan == 'OTOMATIS' %}<strong class="d-block mt-2">Skor otomatis: {{ jawaban.skor|default_if_none:'0' }}</strong>{% else %}<label class="form-label mt-2" for="skor_{{ jawaban.pk }}">{% if jawaban.soal.pemeriksaan == 'PENALARAN' %}Rekomendasi skor penalaran{% else %}Skor manual{% endif %}</label><input class="form-control exam-answer-score" id="skor_{{ jawaban.pk }}" type="number" name="skor_{{ jawaban.pk }}" min="0" max="{{ jawaban.nilai_maksimal }}" step="0.01" value="{{ jawaban.skor|default_if_none:'' }}" required>{% if jawaban.soal.pemeriksaan == 'PENALARAN' %}<small>Gadik wajib meninjau kewajaran rekomendasi sebelum menyimpan.</small>{% endif %}{% endif %}</div></div>
+            {% endfor %}
+        </div><div class="exam-manual-grade"><button class="btn btn-primary" type="submit"><i data-lucide="save"></i>Konfirmasi &amp; Simpan Nilai</button></div></form>
+        {% endif %}
+    </article>
+    {% empty %}<div class="empty-state"><i data-lucide="clipboard-x"></i><p>Belum ada Serdik yang mengumpulkan ujian.</p></div>{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

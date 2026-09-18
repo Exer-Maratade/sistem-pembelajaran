@@ -1,0 +1,2313 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "isExtraImport": true,
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "isExtraImport": true,
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.validators",
+        "description": "django.contrib.auth.validators",
+        "detail": "django.contrib.auth.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Avg",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "password_validation",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "update_session_auth_hash",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ModelBackend",
+        "importPath": "django.contrib.auth.backends",
+        "description": "django.contrib.auth.backends",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.backends",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionDenied",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidOperation",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "ROUND_HALF_UP",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "require_POST",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "lms.management.commands.seed_students",
+        "description": "lms.management.commands.seed_students",
+        "peekOfCode": "class Command(BaseCommand):\n    help = \"Membuat atau memperbarui 50 data siswa contoh.\"\n    def add_arguments(self, parser):\n        parser.add_argument(\n            \"--password\",\n            default=os.environ.get(\"LMS_SEED_PASSWORD\", \"123!\"),\n            help=\"Kata sandi untuk seluruh akun siswa seed.\",\n        )\n    @transaction.atomic\n    def handle(self, *args, **options):",
+        "detail": "lms.management.commands.seed_students",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "lms.management.commands.seed_users",
+        "description": "lms.management.commands.seed_users",
+        "peekOfCode": "class Command(BaseCommand):\n    help = \"Membuat atau memperbarui pengguna awal untuk role Admin, Gadik, dan Serdik.\"\n    def add_arguments(self, parser):\n        parser.add_argument(\n            \"--password\",\n            default=os.environ.get(\"LMS_SEED_PASSWORD\", \"123!\"),\n            help=\"Kata sandi untuk seluruh akun seed (default: LMS_SEED_PASSWORD).\",\n        )\n    @transaction.atomic\n    def handle(self, *args, **options):",
+        "detail": "lms.management.commands.seed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0001_initial",
+        "description": "lms.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Kurikulum',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "lms.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0002_matapelajaran_gadik_pengajar",
+        "description": "lms.migrations.0002_matapelajaran_gadik_pengajar",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='matapelajaran',\n            name='gadik_pengajar',\n            field=models.ManyToManyField(blank=True, limit_choices_to={'role': 'GADIK'}, related_name='mata_pelajaran_diampu', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "lms.migrations.0002_matapelajaran_gadik_pengajar",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0003_remove_anggotakelas_unik_anggota_kelas_and_more",
+        "description": "lms.migrations.0003_remove_anggotakelas_unik_anggota_kelas_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0002_matapelajaran_gadik_pengajar'),\n    ]\n    operations = [\n        migrations.RemoveConstraint(\n            model_name='anggotakelas',\n            name='unik_anggota_kelas',\n        ),\n        migrations.AddField(",
+        "detail": "lms.migrations.0003_remove_anggotakelas_unik_anggota_kelas_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0004_pengumpulantugas_dinilai_oleh",
+        "description": "lms.migrations.0004_pengumpulantugas_dinilai_oleh",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"lms\", \"0003_remove_anggotakelas_unik_anggota_kelas_and_more\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"pengumpulantugas\",\n            name=\"dinilai_oleh\",\n            field=models.ForeignKey(\n                blank=True,",
+        "detail": "lms.migrations.0004_pengumpulantugas_dinilai_oleh",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0005_backfill_legacy_graders",
+        "description": "lms.migrations.0005_backfill_legacy_graders",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"lms\", \"0004_pengumpulantugas_dinilai_oleh\"),\n    ]\n    operations = [\n        migrations.RunPython(backfill_legacy_graders, migrations.RunPython.noop),\n    ]",
+        "detail": "lms.migrations.0005_backfill_legacy_graders",
+        "documentation": {}
+    },
+    {
+        "label": "backfill_legacy_graders",
+        "kind": 2,
+        "importPath": "lms.migrations.0005_backfill_legacy_graders",
+        "description": "lms.migrations.0005_backfill_legacy_graders",
+        "peekOfCode": "def backfill_legacy_graders(apps, schema_editor):\n    PengumpulanTugas = apps.get_model(\"lms\", \"PengumpulanTugas\")\n    pengumpulan_lama = PengumpulanTugas.objects.filter(\n        nilai__isnull=False,\n        dinilai_oleh__isnull=True,\n    ).select_related(\"tugas\")\n    for pengumpulan in pengumpulan_lama.iterator():\n        pengumpulan.dinilai_oleh_id = pengumpulan.tugas.gadik_id\n        pengumpulan.save(update_fields=[\"dinilai_oleh\"])\nclass Migration(migrations.Migration):",
+        "detail": "lms.migrations.0005_backfill_legacy_graders",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0006_ujian",
+        "description": "lms.migrations.0006_ujian",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0005_backfill_legacy_graders'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Ujian',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('judul', models.CharField(max_length=200)),",
+        "detail": "lms.migrations.0006_ujian",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0007_remove_ujian_deadline_soalujianesai",
+        "description": "lms.migrations.0007_remove_ujian_deadline_soalujianesai",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0006_ujian'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='ujian',\n            name='deadline',\n        ),\n        migrations.CreateModel(",
+        "detail": "lms.migrations.0007_remove_ujian_deadline_soalujianesai",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0008_ujian_pemeriksaan_pengumpulanujian_jawabanujianesai_and_more",
+        "description": "lms.migrations.0008_ujian_pemeriksaan_pengumpulanujian_jawabanujianesai_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0007_remove_ujian_deadline_soalujianesai'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='ujian',\n            name='pemeriksaan',\n            field=models.CharField(choices=[('OTOMATIS', 'Otomatis'), ('MANUAL', 'Manual')], default='MANUAL', max_length=10),\n        ),",
+        "detail": "lms.migrations.0008_ujian_pemeriksaan_pengumpulanujian_jawabanujianesai_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0009_remove_soalujianesai_bobot",
+        "description": "lms.migrations.0009_remove_soalujianesai_bobot",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0008_ujian_pemeriksaan_pengumpulanujian_jawabanujianesai_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='soalujianesai',\n            name='bobot',\n        ),\n    ]",
+        "detail": "lms.migrations.0009_remove_soalujianesai_bobot",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0010_align_schedules_to_wita",
+        "description": "lms.migrations.0010_align_schedules_to_wita",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0009_remove_soalujianesai_bobot\")]\n    operations = [\n        migrations.RunPython(align_schedules_to_wita, restore_schedules_to_wib),\n    ]",
+        "detail": "lms.migrations.0010_align_schedules_to_wita",
+        "documentation": {}
+    },
+    {
+        "label": "align_schedules_to_wita",
+        "kind": 2,
+        "importPath": "lms.migrations.0010_align_schedules_to_wita",
+        "description": "lms.migrations.0010_align_schedules_to_wita",
+        "peekOfCode": "def align_schedules_to_wita(apps, schema_editor):\n    Tugas = apps.get_model(\"lms\", \"Tugas\")\n    Ujian = apps.get_model(\"lms\", \"Ujian\")\n    adjustment = timedelta(hours=-1)\n    Tugas.objects.update(deadline=F(\"deadline\") + adjustment)\n    Ujian.objects.update(waktu_mulai=F(\"waktu_mulai\") + adjustment)\ndef restore_schedules_to_wib(apps, schema_editor):\n    Tugas = apps.get_model(\"lms\", \"Tugas\")\n    Ujian = apps.get_model(\"lms\", \"Ujian\")\n    adjustment = timedelta(hours=1)",
+        "detail": "lms.migrations.0010_align_schedules_to_wita",
+        "documentation": {}
+    },
+    {
+        "label": "restore_schedules_to_wib",
+        "kind": 2,
+        "importPath": "lms.migrations.0010_align_schedules_to_wita",
+        "description": "lms.migrations.0010_align_schedules_to_wita",
+        "peekOfCode": "def restore_schedules_to_wib(apps, schema_editor):\n    Tugas = apps.get_model(\"lms\", \"Tugas\")\n    Ujian = apps.get_model(\"lms\", \"Ujian\")\n    adjustment = timedelta(hours=1)\n    Tugas.objects.update(deadline=F(\"deadline\") + adjustment)\n    Ujian.objects.update(waktu_mulai=F(\"waktu_mulai\") + adjustment)\nclass Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0009_remove_soalujianesai_bobot\")]\n    operations = [\n        migrations.RunPython(align_schedules_to_wita, restore_schedules_to_wib),",
+        "detail": "lms.migrations.0010_align_schedules_to_wita",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0011_question_checking_mode",
+        "description": "lms.migrations.0011_question_checking_mode",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0010_align_schedules_to_wita\")]\n    operations = [\n        migrations.AddField(\n            model_name=\"soalujianesai\",\n            name=\"pemeriksaan\",\n            field=models.CharField(\n                choices=[(\"MANUAL\", \"Manual\"), (\"OTOMATIS\", \"Otomatis\"), (\"PENALARAN\", \"Penalaran\")],\n                default=\"MANUAL\",\n                max_length=10,",
+        "detail": "lms.migrations.0011_question_checking_mode",
+        "documentation": {}
+    },
+    {
+        "label": "copy_checking_mode_to_questions",
+        "kind": 2,
+        "importPath": "lms.migrations.0011_question_checking_mode",
+        "description": "lms.migrations.0011_question_checking_mode",
+        "peekOfCode": "def copy_checking_mode_to_questions(apps, schema_editor):\n    SoalUjianEsai = apps.get_model(\"lms\", \"SoalUjianEsai\")\n    for soal in SoalUjianEsai.objects.select_related(\"ujian\"):\n        soal.pemeriksaan = soal.ujian.pemeriksaan\n        soal.save(update_fields=[\"pemeriksaan\"])\nclass Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0010_align_schedules_to_wita\")]\n    operations = [\n        migrations.AddField(\n            model_name=\"soalujianesai\",",
+        "detail": "lms.migrations.0011_question_checking_mode",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0012_remove_ujian_pemeriksaan",
+        "description": "lms.migrations.0012_remove_ujian_pemeriksaan",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0011_question_checking_mode\")]\n    operations = [\n        migrations.RemoveField(model_name=\"ujian\", name=\"pemeriksaan\"),\n    ]",
+        "detail": "lms.migrations.0012_remove_ujian_pemeriksaan",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0013_exam_attempt_timing",
+        "description": "lms.migrations.0013_exam_attempt_timing",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [(\"lms\", \"0012_remove_ujian_pemeriksaan\")]\n    operations = [\n        migrations.AddField(\n            model_name=\"ujian\",\n            name=\"waktu_selesai\",\n            field=models.DateTimeField(null=True),\n        ),\n        migrations.AddField(\n            model_name=\"pengumpulanujian\",",
+        "detail": "lms.migrations.0013_exam_attempt_timing",
+        "documentation": {}
+    },
+    {
+        "label": "populate_exam_timing",
+        "kind": 2,
+        "importPath": "lms.migrations.0013_exam_attempt_timing",
+        "description": "lms.migrations.0013_exam_attempt_timing",
+        "peekOfCode": "def populate_exam_timing(apps, schema_editor):\n    Ujian = apps.get_model(\"lms\", \"Ujian\")\n    PengumpulanUjian = apps.get_model(\"lms\", \"PengumpulanUjian\")\n    for ujian in Ujian.objects.all():\n        ujian.waktu_selesai = ujian.waktu_mulai + timedelta(minutes=ujian.durasi_menit)\n        ujian.save(update_fields=[\"waktu_selesai\"])\n    for pengumpulan in PengumpulanUjian.objects.all():\n        pengumpulan.started_at = pengumpulan.submitted_at\n        pengumpulan.save(update_fields=[\"started_at\"])\nclass Migration(migrations.Migration):",
+        "detail": "lms.migrations.0013_exam_attempt_timing",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "lms.migrations.0014_soalujianpilihanganda_opsiujianpilihanganda_and_more",
+        "description": "lms.migrations.0014_soalujianpilihanganda_opsiujianpilihanganda_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('lms', '0013_exam_attempt_timing'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='SoalUjianPilihanGanda',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('urutan', models.PositiveSmallIntegerField()),",
+        "detail": "lms.migrations.0014_soalujianpilihanganda_opsiujianpilihanganda_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    list_display = [\"username\", \"nama_lengkap\", \"nip_nrp\", \"role\", \"is_active\"]\n    list_filter = [\"role\", \"is_active\", \"is_staff\"]\n    search_fields = [\"username\", \"nama_lengkap\", \"nip_nrp\", \"email\"]\n    fieldsets = UserAdmin.fieldsets + ((\"Profil LMS\", {\"fields\": (\"nama_lengkap\", \"nip_nrp\", \"tempat_lahir\", \"tanggal_lahir\", \"asal_pengiriman\", \"alamat\", \"role\")}),)\n    add_fieldsets = UserAdmin.add_fieldsets + (\n        (\"Profil LMS\", {\"fields\": (\"nama_lengkap\", \"nip_nrp\", \"tempat_lahir\", \"tanggal_lahir\", \"asal_pengiriman\", \"alamat\", \"email\", \"role\")}),\n    )\nclass AnggotaKelasInline(admin.TabularInline):\n    model = AnggotaKelas",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AnggotaKelasInline",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class AnggotaKelasInline(admin.TabularInline):\n    model = AnggotaKelas\n    extra = 1\n@admin.register(Kelas)\nclass KelasAdmin(admin.ModelAdmin):\n    list_display = [\"nama_kelas\", \"kurikulum\", \"gadik_pembina\"]\n    list_filter = [\"kurikulum\"]\n    search_fields = [\"nama_kelas\"]\n    inlines = [AnggotaKelasInline]\n@admin.register(Kurikulum)",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "KelasAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class KelasAdmin(admin.ModelAdmin):\n    list_display = [\"nama_kelas\", \"kurikulum\", \"gadik_pembina\"]\n    list_filter = [\"kurikulum\"]\n    search_fields = [\"nama_kelas\"]\n    inlines = [AnggotaKelasInline]\n@admin.register(Kurikulum)\nclass KurikulumAdmin(admin.ModelAdmin):\n    list_display = [\"nama_kurikulum\", \"tahun_ajaran\", \"is_active\"]\n    list_filter = [\"is_active\", \"tahun_ajaran\"]\n@admin.register(MataPelajaran)",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "KurikulumAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class KurikulumAdmin(admin.ModelAdmin):\n    list_display = [\"nama_kurikulum\", \"tahun_ajaran\", \"is_active\"]\n    list_filter = [\"is_active\", \"tahun_ajaran\"]\n@admin.register(MataPelajaran)\nclass MataPelajaranAdmin(admin.ModelAdmin):\n    list_display = [\"kode_mapel\", \"nama_mapel\", \"kurikulum\", \"daftar_gadik\"]\n    list_filter = [\"kurikulum\"]\n    search_fields = [\"kode_mapel\", \"nama_mapel\"]\n    filter_horizontal = [\"gadik_pengajar\"]\n    @admin.display(description=\"Gadik pengajar\")",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "MataPelajaranAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class MataPelajaranAdmin(admin.ModelAdmin):\n    list_display = [\"kode_mapel\", \"nama_mapel\", \"kurikulum\", \"daftar_gadik\"]\n    list_filter = [\"kurikulum\"]\n    search_fields = [\"kode_mapel\", \"nama_mapel\"]\n    filter_horizontal = [\"gadik_pengajar\"]\n    @admin.display(description=\"Gadik pengajar\")\n    def daftar_gadik(self, obj):\n        return \", \".join(gadik.display_name for gadik in obj.gadik_pengajar.all()) or \"-\"\n@admin.register(ModulBelajar)\nclass ModulBelajarAdmin(admin.ModelAdmin):",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ModulBelajarAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class ModulBelajarAdmin(admin.ModelAdmin):\n    list_display = [\"judul\", \"kelas\", \"mapel\", \"gadik\", \"created_at\"]\n    list_filter = [\"kelas\", \"mapel\"]\n@admin.register(Tugas)\nclass TugasAdmin(admin.ModelAdmin):\n    list_display = [\"judul_tugas\", \"kelas\", \"mapel\", \"gadik\", \"deadline\", \"bobot\"]\n    list_filter = [\"kelas\", \"mapel\"]\n@admin.register(Ujian)\nclass UjianAdmin(admin.ModelAdmin):\n    list_display = [\"judul\", \"metode\", \"kelas\", \"mapel\", \"gadik\", \"waktu_mulai\", \"waktu_selesai\", \"durasi_menit\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "TugasAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class TugasAdmin(admin.ModelAdmin):\n    list_display = [\"judul_tugas\", \"kelas\", \"mapel\", \"gadik\", \"deadline\", \"bobot\"]\n    list_filter = [\"kelas\", \"mapel\"]\n@admin.register(Ujian)\nclass UjianAdmin(admin.ModelAdmin):\n    list_display = [\"judul\", \"metode\", \"kelas\", \"mapel\", \"gadik\", \"waktu_mulai\", \"waktu_selesai\", \"durasi_menit\"]\n    list_filter = [\"metode\", \"kelas\", \"mapel\"]\n@admin.register(SoalUjianEsai)\nclass SoalUjianEsaiAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\", \"pemeriksaan\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UjianAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class UjianAdmin(admin.ModelAdmin):\n    list_display = [\"judul\", \"metode\", \"kelas\", \"mapel\", \"gadik\", \"waktu_mulai\", \"waktu_selesai\", \"durasi_menit\"]\n    list_filter = [\"metode\", \"kelas\", \"mapel\"]\n@admin.register(SoalUjianEsai)\nclass SoalUjianEsaiAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\", \"pemeriksaan\"]\n    list_filter = [\"pemeriksaan\", \"ujian__kelas\", \"ujian__mapel\"]\nclass OpsiUjianPilihanGandaInline(admin.TabularInline):\n    model = OpsiUjianPilihanGanda\n    extra = 4",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianEsaiAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class SoalUjianEsaiAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\", \"pemeriksaan\"]\n    list_filter = [\"pemeriksaan\", \"ujian__kelas\", \"ujian__mapel\"]\nclass OpsiUjianPilihanGandaInline(admin.TabularInline):\n    model = OpsiUjianPilihanGanda\n    extra = 4\n@admin.register(SoalUjianPilihanGanda)\nclass SoalUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\"]\n    list_filter = [\"ujian__kelas\", \"ujian__mapel\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "OpsiUjianPilihanGandaInline",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class OpsiUjianPilihanGandaInline(admin.TabularInline):\n    model = OpsiUjianPilihanGanda\n    extra = 4\n@admin.register(SoalUjianPilihanGanda)\nclass SoalUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\"]\n    list_filter = [\"ujian__kelas\", \"ujian__mapel\"]\n    inlines = [OpsiUjianPilihanGandaInline]\n@admin.register(PengumpulanUjian)\nclass PengumpulanUjianAdmin(admin.ModelAdmin):",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianPilihanGandaAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class SoalUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"urutan\"]\n    list_filter = [\"ujian__kelas\", \"ujian__mapel\"]\n    inlines = [OpsiUjianPilihanGandaInline]\n@admin.register(PengumpulanUjian)\nclass PengumpulanUjianAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"serdik\", \"started_at\", \"submitted_at\", \"nilai\"]\n    list_filter = [\"ujian__kelas\"]\n@admin.register(JawabanUjianEsai)\nclass JawabanUjianEsaiAdmin(admin.ModelAdmin):",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "PengumpulanUjianAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class PengumpulanUjianAdmin(admin.ModelAdmin):\n    list_display = [\"ujian\", \"serdik\", \"started_at\", \"submitted_at\", \"nilai\"]\n    list_filter = [\"ujian__kelas\"]\n@admin.register(JawabanUjianEsai)\nclass JawabanUjianEsaiAdmin(admin.ModelAdmin):\n    list_display = [\"pengumpulan\", \"soal\", \"skor\"]\n@admin.register(JawabanUjianPilihanGanda)\nclass JawabanUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"pengumpulan\", \"soal\", \"opsi\", \"skor\"]\n@admin.register(PengumpulanTugas)",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianEsaiAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class JawabanUjianEsaiAdmin(admin.ModelAdmin):\n    list_display = [\"pengumpulan\", \"soal\", \"skor\"]\n@admin.register(JawabanUjianPilihanGanda)\nclass JawabanUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"pengumpulan\", \"soal\", \"opsi\", \"skor\"]\n@admin.register(PengumpulanTugas)\nclass PengumpulanTugasAdmin(admin.ModelAdmin):\n    list_display = [\"tugas\", \"serdik\", \"submitted_at\", \"status\", \"nilai\", \"dinilai_oleh\"]\n    list_filter = [\"status\", \"tugas__kelas\"]\n    readonly_fields = [\"submitted_at\", \"status\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianPilihanGandaAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class JawabanUjianPilihanGandaAdmin(admin.ModelAdmin):\n    list_display = [\"pengumpulan\", \"soal\", \"opsi\", \"skor\"]\n@admin.register(PengumpulanTugas)\nclass PengumpulanTugasAdmin(admin.ModelAdmin):\n    list_display = [\"tugas\", \"serdik\", \"submitted_at\", \"status\", \"nilai\", \"dinilai_oleh\"]\n    list_filter = [\"status\", \"tugas__kelas\"]\n    readonly_fields = [\"submitted_at\", \"status\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "PengumpulanTugasAdmin",
+        "kind": 6,
+        "importPath": "lms.admin",
+        "description": "lms.admin",
+        "peekOfCode": "class PengumpulanTugasAdmin(admin.ModelAdmin):\n    list_display = [\"tugas\", \"serdik\", \"submitted_at\", \"status\", \"nilai\", \"dinilai_oleh\"]\n    list_filter = [\"status\", \"tugas__kelas\"]\n    readonly_fields = [\"submitted_at\", \"status\"]",
+        "detail": "lms.admin",
+        "documentation": {}
+    },
+    {
+        "label": "LmsConfig",
+        "kind": 6,
+        "importPath": "lms.apps",
+        "description": "lms.apps",
+        "peekOfCode": "class LmsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"lms\"",
+        "detail": "lms.apps",
+        "documentation": {}
+    },
+    {
+        "label": "NipNrpBackend",
+        "kind": 6,
+        "importPath": "lms.backend",
+        "description": "lms.backend",
+        "peekOfCode": "class NipNrpBackend(ModelBackend):\n    def authenticate(self, request, username=None, password=None, **kwargs):\n        User = get_user_model()\n        try:\n            user = User.objects.get(nip_nrp=username)\n        except User.DoesNotExist:\n            return None\n        if user.check_password(password) and self.user_can_authenticate(user):\n            return user\n        return None",
+        "detail": "lms.backend",
+        "documentation": {}
+    },
+    {
+        "label": "StyledModelForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class StyledModelForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        for field in self.fields.values():\n            if isinstance(field.widget, forms.CheckboxSelectMultiple):\n                continue\n            if isinstance(field.widget, forms.CheckboxInput):\n                css_class = \"form-check-input\"\n            elif isinstance(field.widget, forms.Select):\n                css_class = \"form-select\"",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MateriKelasForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class MateriKelasForm(StyledModelForm):\n    def clean(self):\n        cleaned_data = super().clean()\n        kelas = cleaned_data.get(\"kelas\")\n        mapel = cleaned_data.get(\"mapel\")\n        if kelas and mapel and kelas.kurikulum_id != mapel.kurikulum_id:\n            self.add_error(\"mapel\", \"Mata pelajaran harus berasal dari kurikulum kelas.\")\n        return cleaned_data\nclass ModulBelajarForm(MateriKelasForm):\n    class Meta:",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ModulBelajarForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class ModulBelajarForm(MateriKelasForm):\n    class Meta:\n        model = ModulBelajar\n        fields = [\"mapel\", \"judul\", \"deskripsi\", \"file_modul\"]\n        widgets = {\"deskripsi\": forms.Textarea(attrs={\"rows\": 4})}\n    def __init__(self, *args, gadik=None, **kwargs):\n        super().__init__(*args, **kwargs)\n        if gadik:\n            if gadik.role == CustomUser.Role.ADMIN or gadik.is_superuser:\n                self.fields[\"mapel\"].queryset = MataPelajaran.objects.all()",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "TugasForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class TugasForm(MateriKelasForm):\n    class Meta:\n        model = Tugas\n        fields = [\"kelas\", \"mapel\", \"judul_tugas\", \"instruksi\", \"file_lampiran\", \"deadline\", \"bobot\"]\n        widgets = {\n            \"instruksi\": forms.Textarea(attrs={\"rows\": 5}),\n            \"deadline\": forms.DateTimeInput(attrs={\"type\": \"datetime-local\"}, format=\"%Y-%m-%dT%H:%M\"),\n        }\n    def __init__(self, *args, gadik=None, kelas=None, **kwargs):\n        super().__init__(*args, **kwargs)",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UjianForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class UjianForm(MateriKelasForm):\n    class Meta:\n        model = Ujian\n        fields = [\n            \"kelas\", \"mapel\", \"judul\", \"metode\", \"instruksi\",\n            \"waktu_mulai\", \"waktu_selesai\", \"durasi_menit\",\n        ]\n        widgets = {\n            \"metode\": forms.RadioSelect(),\n            \"instruksi\": forms.Textarea(attrs={\"rows\": 4}),",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianEsaiForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class SoalUjianEsaiForm(StyledModelForm):\n    class Meta:\n        model = SoalUjianEsai\n        fields = [\"urutan\", \"pertanyaan\", \"kunci_jawaban\", \"pemeriksaan\"]\n        labels = {\n            \"urutan\": \"Nomor soal\",\n            \"kunci_jawaban\": \"Kunci jawaban / acuan relevansi\",\n            \"pemeriksaan\": \"Metode pemeriksaan\",\n        }\n        widgets = {",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianPilihanGandaForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class SoalUjianPilihanGandaForm(StyledModelForm):\n    MAX_OPSI = 8\n    jumlah_opsi = forms.IntegerField(\n        label=\"Jumlah opsi\",\n        min_value=2,\n        max_value=MAX_OPSI,\n        initial=4,\n        widget=forms.NumberInput(attrs={\"min\": 2, \"max\": MAX_OPSI}),\n    )\n    class Meta:",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianEsaiForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class JawabanUjianEsaiForm(forms.Form):\n    def __init__(self, *args, soal=None, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.soal = list(soal or [])\n        for item in self.soal:\n            self.fields[f\"soal_{item.pk}\"] = forms.CharField(\n                label=f\"Soal {item.urutan}\",\n                widget=forms.Textarea(attrs={\"class\": \"form-control\", \"rows\": 5}),\n            )\nclass JawabanUjianPilihanGandaForm(forms.Form):",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianPilihanGandaForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class JawabanUjianPilihanGandaForm(forms.Form):\n    def __init__(self, *args, soal=None, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.soal = list(soal or [])\n        for item in self.soal:\n            self.fields[f\"soal_{item.pk}\"] = forms.ChoiceField(\n                label=f\"Soal {item.urutan}\",\n                choices=[(opsi.pk, opsi.teks) for opsi in item.opsi.all()],\n                widget=forms.RadioSelect(),\n            )",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PenilaianUjianEsaiForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class PenilaianUjianEsaiForm(StyledModelForm):\n    class Meta:\n        model = PengumpulanUjian\n        fields = [\"nilai\"]\n        labels = {\"nilai\": \"Nilai akhir\"}\n        widgets = {\"nilai\": forms.NumberInput(attrs={\"min\": 0, \"max\": 100, \"step\": \"0.01\"})}\n    def clean_nilai(self):\n        nilai = self.cleaned_data[\"nilai\"]\n        if nilai is None or not 0 <= nilai <= 100:\n            raise forms.ValidationError(\"Nilai harus berada di antara 0 dan 100.\")",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PengumpulanTugasForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class PengumpulanTugasForm(StyledModelForm):\n    class Meta:\n        model = PengumpulanTugas\n        fields = [\"file_tugas\", \"catatan_serdik\"]\n        widgets = {\"catatan_serdik\": forms.Textarea(attrs={\"rows\": 3})}\nclass PenilaianForm(StyledModelForm):\n    class Meta:\n        model = PengumpulanTugas\n        fields = [\"nilai\", \"catatan_gadik\"]\n        widgets = {",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PenilaianForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class PenilaianForm(StyledModelForm):\n    class Meta:\n        model = PengumpulanTugas\n        fields = [\"nilai\", \"catatan_gadik\"]\n        widgets = {\n            \"nilai\": forms.NumberInput(attrs={\"min\": 0, \"max\": 100, \"step\": \"0.01\"}),\n            \"catatan_gadik\": forms.Textarea(attrs={\"rows\": 4}),\n        }\n    def clean_nilai(self):\n        nilai = self.cleaned_data[\"nilai\"]",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "KurikulumForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class KurikulumForm(StyledModelForm):\n    class Meta:\n        model = Kurikulum\n        fields = [\"nama_kurikulum\", \"tahun_ajaran\", \"is_active\"]\nclass KelasForm(StyledModelForm):\n    class Meta:\n        model = Kelas\n        fields = [\"nama_kelas\", \"kurikulum\", \"gadik_pembina\"]\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "KelasForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class KelasForm(StyledModelForm):\n    class Meta:\n        model = Kelas\n        fields = [\"nama_kelas\", \"kurikulum\", \"gadik_pembina\"]\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields[\"kurikulum\"].queryset = Kurikulum.objects.filter(is_active=True)\n        self.fields[\"gadik_pembina\"].queryset = CustomUser.objects.filter(role=CustomUser.Role.GADIK)\nclass SiswaMultipleChoiceField(forms.ModelMultipleChoiceField):\n    def label_from_instance(self, siswa):",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "SiswaMultipleChoiceField",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class SiswaMultipleChoiceField(forms.ModelMultipleChoiceField):\n    def label_from_instance(self, siswa):\n        return f\"{siswa.nip_nrp or '-'} - {siswa.display_name}\"\nclass TambahAnggotaKelasForm(forms.Form):\n    siswa = SiswaMultipleChoiceField(\n        queryset=CustomUser.objects.none(),\n        widget=forms.CheckboxSelectMultiple(),\n        help_text=\"Centang satu atau beberapa siswa yang akan dimasukkan ke kelas.\",\n    )\n    def __init__(self, *args, **kwargs):",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "TambahAnggotaKelasForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class TambahAnggotaKelasForm(forms.Form):\n    siswa = SiswaMultipleChoiceField(\n        queryset=CustomUser.objects.none(),\n        widget=forms.CheckboxSelectMultiple(),\n        help_text=\"Centang satu atau beberapa siswa yang akan dimasukkan ke kelas.\",\n    )\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields[\"siswa\"].queryset = CustomUser.objects.filter(\n            role=CustomUser.Role.SERDIK,",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MataPelajaranForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class MataPelajaranForm(StyledModelForm):\n    class Meta:\n        model = MataPelajaran\n        fields = [\"kurikulum\", \"kode_mapel\", \"nama_mapel\", \"gadik_pengajar\"]\n        widgets = {\"gadik_pengajar\": forms.CheckboxSelectMultiple()}\n        help_texts = {\"gadik_pengajar\": \"Centang satu atau beberapa Gadik yang mengajar mata pelajaran ini.\"}\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields[\"kurikulum\"].queryset = Kurikulum.objects.filter(is_active=True)\n        self.fields[\"gadik_pengajar\"].queryset = CustomUser.objects.filter(",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "GadikForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class GadikForm(UserCreationForm, StyledModelForm):\n    class Meta(UserCreationForm.Meta):\n        model = CustomUser\n        fields = [\"nama_lengkap\", \"nip_nrp\", \"email\"]\n    def save(self, commit=True):\n        user = super().save(commit=False)\n        user.username = self.cleaned_data[\"nip_nrp\"]\n        user.role = CustomUser.Role.GADIK\n        if commit:\n            user.save()",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "SiswaForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class SiswaForm(UserCreationForm, StyledModelForm):\n    class Meta(UserCreationForm.Meta):\n        model = CustomUser\n        fields = [\"nip_nrp\", \"nama_lengkap\", \"tempat_lahir\", \"tanggal_lahir\", \"asal_pengiriman\", \"alamat\"]\n        labels = {\"nip_nrp\": \"NOSIS\"}\n        widgets = {\n            \"tanggal_lahir\": forms.DateInput(attrs={\"type\": \"date\"}),\n            \"alamat\": forms.Textarea(attrs={\"rows\": 3}),\n        }\n    def save(self, commit=True):",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditPenggunaForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class EditPenggunaForm(StyledModelForm):\n    password_baru = forms.CharField(\n        required=False,\n        label=\"Password baru\",\n        widget=forms.PasswordInput(attrs={\"autocomplete\": \"new-password\"}),\n        help_text=\"Kosongkan jika password tidak ingin diubah.\",\n    )\n    konfirmasi_password = forms.CharField(\n        required=False,\n        label=\"Konfirmasi password baru\",",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditSiswaForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class EditSiswaForm(EditPenggunaForm):\n    class Meta:\n        model = CustomUser\n        fields = [\n            \"nip_nrp\", \"nama_lengkap\", \"tempat_lahir\", \"tanggal_lahir\",\n            \"asal_pengiriman\", \"alamat\", \"is_active\",\n        ]\n        labels = {\"nip_nrp\": \"NOSIS\", \"is_active\": \"Akun aktif\"}\n        widgets = {\n            \"tanggal_lahir\": forms.DateInput(attrs={\"type\": \"date\"}),",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ProfilForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class ProfilForm(EditPenggunaForm):\n    class Meta:\n        model = CustomUser\n        fields = [\n            \"nip_nrp\",\n            \"nama_lengkap\",\n            \"email\",\n            \"tempat_lahir\",\n            \"tanggal_lahir\",\n            \"asal_pengiriman\",",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditGadikForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class EditGadikForm(EditPenggunaForm):\n    mata_pelajaran_diajar = forms.ModelMultipleChoiceField(\n        queryset=MataPelajaran.objects.none(),\n        required=False,\n        label=\"Mata pelajaran yang diajarkan\",\n        widget=forms.CheckboxSelectMultiple(),\n        help_text=\"Centang mata pelajaran yang diajarkan oleh Gadik ini.\",\n    )\n    class Meta:\n        model = CustomUser",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AdminModulBelajarForm",
+        "kind": 6,
+        "importPath": "lms.forms",
+        "description": "lms.forms",
+        "peekOfCode": "class AdminModulBelajarForm(StyledModelForm):\n    kurikulum = forms.ModelChoiceField(\n        queryset=Kurikulum.objects.none(),\n        help_text=\"Modul akan dibagikan ke seluruh kelas dalam kurikulum ini.\",\n    )\n    class Meta:\n        model = ModulBelajar\n        fields = [\"kurikulum\", \"mapel\", \"judul\", \"deskripsi\", \"file_modul\"]\n        widgets = {\"deskripsi\": forms.Textarea(attrs={\"rows\": 4})}\n    def __init__(self, *args, mapel_terpilih=None, **kwargs):",
+        "detail": "lms.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class CustomUser(AbstractUser):\n    class Role(models.TextChoices):\n        ADMIN = \"ADMIN\", \"Admin\"\n        GADIK = \"GADIK\", \"Gadik\"\n        SERDIK = \"SERDIK\", \"Serdik\"\n    nama_lengkap = models.CharField(max_length=255, blank=True)\n    nip_nrp = models.CharField(max_length=30, unique=True, null=True, blank=True)\n    tempat_lahir = models.CharField(max_length=100, blank=True)\n    tanggal_lahir = models.DateField(null=True, blank=True)\n    asal_pengiriman = models.CharField(max_length=150, blank=True)",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "Kurikulum",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class Kurikulum(models.Model):\n    nama_kurikulum = models.CharField(max_length=150)\n    tahun_ajaran = models.CharField(max_length=10)\n    is_active = models.BooleanField(default=True)\n    class Meta:\n        ordering = [\"-is_active\", \"-tahun_ajaran\", \"nama_kurikulum\"]\n        verbose_name_plural = \"Kurikulum\"\n    def __str__(self):\n        return f\"{self.nama_kurikulum} ({self.tahun_ajaran})\"\nclass MataPelajaran(models.Model):",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "MataPelajaran",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class MataPelajaran(models.Model):\n    kurikulum = models.ForeignKey(Kurikulum, on_delete=models.CASCADE, related_name=\"mata_pelajaran\")\n    kode_mapel = models.CharField(max_length=20)\n    nama_mapel = models.CharField(max_length=100)\n    gadik_pengajar = models.ManyToManyField(\n        CustomUser,\n        blank=True,\n        limit_choices_to={\"role\": CustomUser.Role.GADIK},\n        related_name=\"mata_pelajaran_diampu\",\n    )",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "Kelas",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class Kelas(models.Model):\n    nama_kelas = models.CharField(max_length=50)\n    kurikulum = models.ForeignKey(Kurikulum, on_delete=models.PROTECT, related_name=\"kelas\")\n    gadik_pembina = models.ForeignKey(\n        CustomUser,\n        on_delete=models.SET_NULL,\n        null=True,\n        blank=True,\n        limit_choices_to={\"role\": CustomUser.Role.GADIK},\n        related_name=\"kelas_binaan\",",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "AnggotaKelas",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class AnggotaKelas(models.Model):\n    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE, related_name=\"anggota\")\n    serdik = models.ForeignKey(\n        CustomUser,\n        on_delete=models.CASCADE,\n        limit_choices_to={\"role\": CustomUser.Role.SERDIK},\n        related_name=\"keanggotaan_kelas\",\n    )\n    class Meta:\n        constraints = [models.UniqueConstraint(fields=[\"serdik\"], name=\"unik_kelas_per_serdik\")]",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "ModulBelajar",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class ModulBelajar(models.Model):\n    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE, related_name=\"modul\")\n    mapel = models.ForeignKey(MataPelajaran, on_delete=models.PROTECT, related_name=\"modul\")\n    gadik = models.ForeignKey(CustomUser, on_delete=models.PROTECT, related_name=\"modul_dibuat\")\n    judul = models.CharField(max_length=200)\n    deskripsi = models.TextField()\n    file_modul = models.FileField(upload_to=\"modul/%Y/%m/\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        ordering = [\"-created_at\"]",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tugas",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class Tugas(models.Model):\n    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE, related_name=\"tugas\")\n    mapel = models.ForeignKey(MataPelajaran, on_delete=models.PROTECT, related_name=\"tugas\")\n    gadik = models.ForeignKey(CustomUser, on_delete=models.PROTECT, related_name=\"tugas_dibuat\")\n    judul_tugas = models.CharField(max_length=200)\n    instruksi = models.TextField()\n    file_lampiran = models.FileField(upload_to=\"tugas/lampiran/%Y/%m/\", blank=True)\n    deadline = models.DateTimeField()\n    bobot = models.PositiveSmallIntegerField(default=100, help_text=\"Bobot nilai dalam persen.\")\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ujian",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class Ujian(models.Model):\n    class Metode(models.TextChoices):\n        ESAI = \"ESAI\", \"Esai\"\n        PILIHAN_GANDA = \"PILIHAN_GANDA\", \"Pilihan Ganda\"\n    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE, related_name=\"ujian\")\n    mapel = models.ForeignKey(MataPelajaran, on_delete=models.PROTECT, related_name=\"ujian\")\n    gadik = models.ForeignKey(CustomUser, on_delete=models.PROTECT, related_name=\"ujian_dibuat\")\n    judul = models.CharField(max_length=200)\n    metode = models.CharField(max_length=20, choices=Metode.choices)\n    instruksi = models.TextField()",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianEsai",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class SoalUjianEsai(models.Model):\n    class Pemeriksaan(models.TextChoices):\n        MANUAL = \"MANUAL\", \"Manual\"\n        OTOMATIS = \"OTOMATIS\", \"Otomatis\"\n        PENALARAN = \"PENALARAN\", \"Penalaran\"\n    ujian = models.ForeignKey(Ujian, on_delete=models.CASCADE, related_name=\"soal_esai\")\n    urutan = models.PositiveSmallIntegerField()\n    pertanyaan = models.TextField()\n    kunci_jawaban = models.TextField()\n    pemeriksaan = models.CharField(max_length=10, choices=Pemeriksaan.choices, default=Pemeriksaan.MANUAL)",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "SoalUjianPilihanGanda",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class SoalUjianPilihanGanda(models.Model):\n    ujian = models.ForeignKey(Ujian, on_delete=models.CASCADE, related_name=\"soal_pilihan_ganda\")\n    urutan = models.PositiveSmallIntegerField()\n    pertanyaan = models.TextField()\n    class Meta:\n        ordering = [\"urutan\"]\n        constraints = [\n            models.UniqueConstraint(fields=[\"ujian\", \"urutan\"], name=\"unik_urutan_soal_pg_per_ujian\")\n        ]\n        verbose_name_plural = \"Soal ujian pilihan ganda\"",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "OpsiUjianPilihanGanda",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class OpsiUjianPilihanGanda(models.Model):\n    soal = models.ForeignKey(SoalUjianPilihanGanda, on_delete=models.CASCADE, related_name=\"opsi\")\n    urutan = models.PositiveSmallIntegerField()\n    teks = models.CharField(max_length=500)\n    is_kunci = models.BooleanField(default=False)\n    class Meta:\n        ordering = [\"urutan\"]\n        constraints = [\n            models.UniqueConstraint(fields=[\"soal\", \"urutan\"], name=\"unik_urutan_opsi_pg_per_soal\")\n        ]",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "PengumpulanUjian",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class PengumpulanUjian(models.Model):\n    ujian = models.ForeignKey(Ujian, on_delete=models.CASCADE, related_name=\"pengumpulan\")\n    serdik = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name=\"pengumpulan_ujian\")\n    started_at = models.DateTimeField(null=True, blank=True)\n    submitted_at = models.DateTimeField(null=True, blank=True)\n    nilai = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    class Meta:\n        constraints = [models.UniqueConstraint(fields=[\"ujian\", \"serdik\"], name=\"unik_pengumpulan_ujian\")]\n        verbose_name_plural = \"Pengumpulan ujian\"\n    @staticmethod",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianEsai",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class JawabanUjianEsai(models.Model):\n    pengumpulan = models.ForeignKey(PengumpulanUjian, on_delete=models.CASCADE, related_name=\"jawaban_esai\")\n    soal = models.ForeignKey(SoalUjianEsai, on_delete=models.CASCADE, related_name=\"jawaban\")\n    jawaban = models.TextField()\n    skor = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    class Meta:\n        constraints = [\n            models.UniqueConstraint(fields=[\"pengumpulan\", \"soal\"], name=\"unik_jawaban_esai_per_soal\")\n        ]\n        verbose_name_plural = \"Jawaban ujian esai\"",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "JawabanUjianPilihanGanda",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class JawabanUjianPilihanGanda(models.Model):\n    pengumpulan = models.ForeignKey(PengumpulanUjian, on_delete=models.CASCADE, related_name=\"jawaban_pilihan_ganda\")\n    soal = models.ForeignKey(SoalUjianPilihanGanda, on_delete=models.CASCADE, related_name=\"jawaban\")\n    opsi = models.ForeignKey(OpsiUjianPilihanGanda, on_delete=models.PROTECT, related_name=\"jawaban\")\n    skor = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)\n    class Meta:\n        constraints = [\n            models.UniqueConstraint(fields=[\"pengumpulan\", \"soal\"], name=\"unik_jawaban_pg_per_soal\")\n        ]\n        verbose_name_plural = \"Jawaban ujian pilihan ganda\"",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "PengumpulanTugas",
+        "kind": 6,
+        "importPath": "lms.models",
+        "description": "lms.models",
+        "peekOfCode": "class PengumpulanTugas(models.Model):\n    class Status(models.TextChoices):\n        TERKIRIM = \"TERKIRIM\", \"Terkirim\"\n        TERLAMBAT = \"TERLAMBAT\", \"Terlambat\"\n        DINILAI = \"DINILAI\", \"Dinilai\"\n    tugas = models.ForeignKey(Tugas, on_delete=models.CASCADE, related_name=\"pengumpulan\")\n    serdik = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name=\"pengumpulan_tugas\")\n    file_tugas = models.FileField(upload_to=\"pengumpulan/%Y/%m/\")\n    catatan_serdik = models.TextField(blank=True)\n    submitted_at = models.DateTimeField(auto_now_add=True)",
+        "detail": "lms.models",
+        "documentation": {}
+    },
+    {
+        "label": "LmsWorkflowTests",
+        "kind": 6,
+        "importPath": "lms.tests",
+        "description": "lms.tests",
+        "peekOfCode": "class LmsWorkflowTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.gadik = CustomUser.objects.create_user(\n            username=\"gadik\", password=\"rahasia123\", role=CustomUser.Role.GADIK, nama_lengkap=\"Gadik Utama\"\n        )\n        cls.admin = CustomUser.objects.create_user(\n            username=\"admin-test\",\n            password=\"rahasia123\",\n            role=CustomUser.Role.ADMIN,",
+        "detail": "lms.tests",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "lms.urls",
+        "description": "lms.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.dashboard, name=\"dashboard\"),\n    path(\"profil/\", views.profil, name=\"profil\"),\n    path(\"kelas/\", views.daftar_kelas, name=\"daftar_kelas\"),\n    path(\"kelas/<int:pk>/\", views.detail_kelas, name=\"detail_kelas\"),\n    path(\"pengelolaan/siswa/\", views.daftar_siswa, name=\"daftar_siswa\"),\n    path(\"pengelolaan/siswa/tambah/\", views.tambah_siswa, name=\"tambah_siswa\"),\n    path(\"pengelolaan/siswa/<int:pk>/ubah/\", views.ubah_siswa, name=\"ubah_siswa\"),\n    path(\"pengelolaan/\", views.pengelolaan_admin, name=\"pengelolaan_admin\"),\n    path(\"pengelolaan/kurikulum/\", views.daftar_kurikulum, name=\"daftar_kurikulum\"),",
+        "detail": "lms.urls",
+        "documentation": {}
+    },
+    {
+        "label": "role_required",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def role_required(*roles):\n    def decorator(view_func):\n        @login_required\n        @wraps(view_func)\n        def wrapped(request, *args, **kwargs):\n            if request.user.role not in roles and not request.user.is_superuser:\n                raise PermissionDenied\n            return view_func(request, *args, **kwargs)\n        return wrapped\n    return decorator",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "is_admin",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def is_admin(user):\n    return user.is_superuser or user.role == CustomUser.Role.ADMIN\ndef ujian_for_manager(user, queryset=None):\n    if queryset is None:\n        queryset = Ujian.objects.all()\n    if is_admin(user):\n        return queryset\n    return queryset.filter(mapel__gadik_pengajar=user).distinct()\ndef kelas_for_user(user):\n    queryset = Kelas.objects.select_related(\"kurikulum\", \"gadik_pembina\")",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ujian_for_manager",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ujian_for_manager(user, queryset=None):\n    if queryset is None:\n        queryset = Ujian.objects.all()\n    if is_admin(user):\n        return queryset\n    return queryset.filter(mapel__gadik_pengajar=user).distinct()\ndef kelas_for_user(user):\n    queryset = Kelas.objects.select_related(\"kurikulum\", \"gadik_pembina\")\n    if user.is_superuser or user.role == CustomUser.Role.ADMIN:\n        return queryset",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kelas_for_user",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kelas_for_user(user):\n    queryset = Kelas.objects.select_related(\"kurikulum\", \"gadik_pembina\")\n    if user.is_superuser or user.role == CustomUser.Role.ADMIN:\n        return queryset\n    if user.role == CustomUser.Role.GADIK:\n        return queryset.filter(\n            Q(gadik_pembina=user) | Q(kurikulum__mata_pelajaran__gadik_pengajar=user)\n        ).distinct()\n    return queryset.filter(anggota__serdik=user)\n@login_required",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "profil",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def profil(request):\n    form = ProfilForm(request.POST or None, instance=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        password_diubah = bool(form.cleaned_data.get(\"password_baru\"))\n        user = form.save()\n        if password_diubah:\n            update_session_auth_hash(request, user)\n        messages.success(request, \"Profil berhasil diperbarui.\")\n        return redirect(\"profil\")\n    return render(",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def dashboard(request):\n    kelas = kelas_for_user(request.user).distinct()\n    kelas_ids = kelas.values_list(\"id\", flat=True)\n    tugas = Tugas.objects.filter(kelas_id__in=kelas_ids).select_related(\"kelas\", \"mapel\", \"gadik\")\n    if request.user.role == CustomUser.Role.GADIK:\n        tugas = tugas.filter(mapel__gadik_pengajar=request.user).distinct()\n    context = {\n        \"kelas\": kelas[:6],\n        \"jumlah_kelas\": kelas.count(),\n        \"jumlah_modul\": ModulBelajar.objects.filter(kelas_id__in=kelas_ids).count(),",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_kelas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_kelas(request):\n    kelas = kelas_for_user(request.user).annotate(\n        jumlah_anggota=Count(\"anggota\", distinct=True),\n        jumlah_modul=Count(\"modul\", distinct=True),\n    )\n    return render(request, \"lms/daftar_kelas.html\", {\"kelas\": kelas})\n@role_required(CustomUser.Role.ADMIN)\ndef daftar_siswa(request):\n    siswa = CustomUser.objects.filter(role=CustomUser.Role.SERDIK).prefetch_related(\n        \"keanggotaan_kelas__kelas\"",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_siswa",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_siswa(request):\n    siswa = CustomUser.objects.filter(role=CustomUser.Role.SERDIK).prefetch_related(\n        \"keanggotaan_kelas__kelas\"\n    ).order_by(\"nama_lengkap\", \"nip_nrp\")\n    return render(request, \"lms/daftar_siswa.html\", {\"siswa\": siswa})\n@role_required(CustomUser.Role.ADMIN)\ndef tambah_siswa(request):\n    form = SiswaForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_siswa",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_siswa(request):\n    form = SiswaForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Data dan akun siswa berhasil ditambahkan.\")\n        return redirect(\"daftar_siswa\")\n    return render(\n        request,\n        \"lms/form.html\",\n        {\"form\": form, \"title\": \"Tambah Siswa\", \"button_text\": \"Simpan siswa\"},",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_siswa",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_siswa(request, pk):\n    siswa = get_object_or_404(CustomUser, pk=pk, role=CustomUser.Role.SERDIK)\n    form = EditSiswaForm(request.POST or None, instance=siswa)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Data siswa berhasil diperbarui.\")\n        return redirect(\"daftar_siswa\")\n    return render(\n        request,\n        \"lms/form.html\",",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kelola_anggota_kelas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kelola_anggota_kelas(request, pk):\n    kelas = get_object_or_404(Kelas.objects.select_related(\"kurikulum\"), pk=pk)\n    form = TambahAnggotaKelasForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        AnggotaKelas.objects.bulk_create(\n            [AnggotaKelas(kelas=kelas, serdik=siswa) for siswa in form.cleaned_data[\"siswa\"]]\n        )\n        messages.success(request, f\"{len(form.cleaned_data['siswa'])} siswa berhasil dimasukkan ke kelas.\")\n        return redirect(\"kelola_anggota_kelas\", pk=kelas.pk)\n    pencarian = request.GET.get(\"q\", \"\").strip()",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hapus_anggota_kelas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hapus_anggota_kelas(request, pk, anggota_pk):\n    anggota = get_object_or_404(AnggotaKelas, pk=anggota_pk, kelas_id=pk)\n    nama_siswa = anggota.serdik.display_name\n    anggota.delete()\n    messages.success(request, f\"{nama_siswa} berhasil dikeluarkan dari kelas.\")\n    return redirect(\"kelola_anggota_kelas\", pk=pk)\n@login_required\ndef detail_kelas(request, pk):\n    kelas = get_object_or_404(kelas_for_user(request.user), pk=pk)\n    modul = kelas.modul.select_related(\"mapel\", \"gadik\").prefetch_related(\"mapel__gadik_pengajar\")",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "detail_kelas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def detail_kelas(request, pk):\n    kelas = get_object_or_404(kelas_for_user(request.user), pk=pk)\n    modul = kelas.modul.select_related(\"mapel\", \"gadik\").prefetch_related(\"mapel__gadik_pengajar\")\n    tugas = kelas.tugas.select_related(\"mapel\", \"gadik\")\n    anggota = kelas.anggota.select_related(\"serdik\").order_by(\"serdik__nama_lengkap\", \"serdik__nip_nrp\")\n    mapel_diajar = MataPelajaran.objects.none()\n    modul_per_mapel = []\n    if request.user.role == CustomUser.Role.SERDIK:\n        kelompok_mapel = {}\n        for item in modul:",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "pengelolaan_admin",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def pengelolaan_admin(request):\n    modul_unik = {}\n    for modul in ModulBelajar.objects.select_related(\"mapel\").order_by(\"-created_at\"):\n        modul_unik.setdefault((modul.mapel_id, modul.file_modul.name), modul)\n    context = {\n        \"kurikulum\": Kurikulum.objects.all()[:5],\n        \"kelas\": Kelas.objects.select_related(\"kurikulum\", \"gadik_pembina\")[:5],\n        \"gadik\": CustomUser.objects.filter(role=CustomUser.Role.GADIK).order_by(\"nama_lengkap\")[:5],\n        \"mapel\": MataPelajaran.objects.select_related(\"kurikulum\").prefetch_related(\"gadik_pengajar\")[:5],\n        \"modul\": list(modul_unik.values())[:5],",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_kurikulum",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_kurikulum(request):\n    kurikulum = Kurikulum.objects.annotate(\n        jumlah_mapel=Count(\"mata_pelajaran\", distinct=True),\n        jumlah_kelas=Count(\"kelas\", distinct=True),\n        jumlah_siswa=Count(\"kelas__anggota__serdik\", distinct=True),\n    )\n    return render(request, \"lms/daftar_kurikulum.html\", {\"kurikulum\": kurikulum})\n@role_required(CustomUser.Role.ADMIN)\n@require_POST\ndef ubah_status_kurikulum(request, pk):",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_status_kurikulum",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_status_kurikulum(request, pk):\n    kurikulum = get_object_or_404(Kurikulum, pk=pk)\n    kurikulum.is_active = request.POST.get(\"is_active\") == \"on\"\n    kurikulum.save(update_fields=[\"is_active\"])\n    status = \"aktif\" if kurikulum.is_active else \"tidak aktif\"\n    messages.success(request, f\"Kurikulum {kurikulum.nama_kurikulum} sekarang {status}.\")\n    return redirect(\"daftar_kurikulum\")\n@role_required(CustomUser.Role.ADMIN)\ndef daftar_gadik(request):\n    gadik = CustomUser.objects.filter(role=CustomUser.Role.GADIK).annotate(",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_gadik",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_gadik(request):\n    gadik = CustomUser.objects.filter(role=CustomUser.Role.GADIK).annotate(\n        jumlah_kelas=Count(\"kelas_binaan\", distinct=True),\n        jumlah_mapel=Count(\"mata_pelajaran_diampu\", distinct=True),\n        jumlah_modul=Count(\"modul_dibuat\", distinct=True),\n    ).order_by(\"nama_lengkap\", \"nip_nrp\")\n    return render(request, \"lms/daftar_gadik.html\", {\"gadik\": gadik})\n@role_required(CustomUser.Role.ADMIN)\ndef ubah_gadik(request, pk):\n    gadik = get_object_or_404(CustomUser, pk=pk, role=CustomUser.Role.GADIK)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_gadik",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_gadik(request, pk):\n    gadik = get_object_or_404(CustomUser, pk=pk, role=CustomUser.Role.GADIK)\n    form = EditGadikForm(request.POST or None, instance=gadik)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Data Gadik berhasil diperbarui.\")\n        return redirect(\"daftar_gadik\")\n    return render(\n        request,\n        \"lms/form.html\",",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_mata_pelajaran",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_mata_pelajaran(request):\n    pencarian = request.GET.get(\"q\", \"\").strip()\n    mapel = MataPelajaran.objects.select_related(\"kurikulum\").prefetch_related(\"gadik_pengajar\", \"modul\")\n    if pencarian:\n        mapel = mapel.filter(nama_mapel__icontains=pencarian)\n    for item in mapel:\n        modul_unik = {}\n        for modul in item.modul.all():\n            modul_unik.setdefault(modul.file_modul.name, modul)\n        item.modul_tersedia = list(modul_unik.values())",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_mata_pelajaran",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_mata_pelajaran(request):\n    form = MataPelajaranForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Mata pelajaran dan Gadik pengajar berhasil ditambahkan.\")\n        return redirect(\"daftar_mata_pelajaran\")\n    return render(\n        request,\n        \"lms/form.html\",\n        {",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_kurikulum",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_kurikulum(request):\n    form = KurikulumForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Kurikulum berhasil ditambahkan.\")\n        return redirect(\"daftar_kurikulum\")\n    return render(request, \"lms/form.html\", {\"form\": form, \"title\": \"Tambah Kurikulum\", \"button_text\": \"Simpan kurikulum\"})\n@role_required(CustomUser.Role.ADMIN)\ndef tambah_kelas(request):\n    form = KelasForm(request.POST or None)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_kelas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_kelas(request):\n    form = KelasForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Kelas berhasil ditambahkan.\")\n        return redirect(\"daftar_kelas\")\n    return render(request, \"lms/form.html\", {\"form\": form, \"title\": \"Tambah Kelas\", \"button_text\": \"Simpan kelas\"})\n@role_required(CustomUser.Role.ADMIN)\ndef tambah_gadik(request):\n    form = GadikForm(request.POST or None)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_gadik",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_gadik(request):\n    form = GadikForm(request.POST or None)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Akun Gadik berhasil ditambahkan.\")\n        return redirect(\"pengelolaan_admin\")\n    return render(request, \"lms/form.html\", {\"form\": form, \"title\": \"Tambah Gadik\", \"button_text\": \"Buat akun Gadik\"})\n@role_required(CustomUser.Role.ADMIN)\n@transaction.atomic\ndef tambah_modul_admin(request):",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "tambah_modul_admin",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def tambah_modul_admin(request):\n    mapel_terpilih = None\n    if request.GET.get(\"mapel\"):\n        mapel_terpilih = get_object_or_404(MataPelajaran, pk=request.GET[\"mapel\"])\n    form = AdminModulBelajarForm(\n        request.POST or None,\n        request.FILES or None,\n        mapel_terpilih=mapel_terpilih,\n    )\n    if request.method == \"POST\" and form.is_valid():",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_modul",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_modul(request):\n    modul_unik = {}\n    queryset = ModulBelajar.objects.select_related(\"mapel\", \"mapel__kurikulum\", \"gadik\").order_by(\n        \"-created_at\"\n    )\n    for modul in queryset:\n        modul_unik.setdefault((modul.mapel_id, modul.file_modul.name), modul)\n    modul_per_mapel = []\n    kelompok_mapel = {}\n    for modul in modul_unik.values():",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "buat_modul",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def buat_modul(request):\n    form = ModulBelajarForm(request.POST or None, request.FILES or None, gadik=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        data = form.cleaned_data\n        kelas = list(data[\"mapel\"].kurikulum.kelas.all())\n        modul_pertama = ModulBelajar.objects.create(\n            kelas=kelas[0],\n            mapel=data[\"mapel\"],\n            gadik=request.user,\n            judul=data[\"judul\"],",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_modul",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_modul(request, pk):\n    queryset = ModulBelajar.objects.all()\n    if not is_admin(request.user):\n        queryset = queryset.filter(gadik=request.user)\n    modul = get_object_or_404(queryset, pk=pk)\n    form = ModulBelajarForm(request.POST or None, request.FILES or None, instance=modul, gadik=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Modul belajar berhasil diperbarui.\")\n        return redirect(\"detail_kelas\", pk=modul.kelas_id)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hapus_modul",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hapus_modul(request, pk):\n    queryset = ModulBelajar.objects.all()\n    if not is_admin(request.user):\n        queryset = queryset.filter(gadik=request.user)\n    modul = get_object_or_404(queryset, pk=pk)\n    if request.method == \"POST\":\n        kelas_id = modul.kelas_id\n        modul.delete()\n        messages.success(request, \"Modul belajar berhasil dihapus.\")\n        return redirect(\"detail_kelas\", pk=kelas_id)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "buat_tugas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def buat_tugas(request):\n    kelas = None\n    kelas_id = request.GET.get(\"kelas\")\n    if kelas_id:\n        kelas = get_object_or_404(kelas_for_user(request.user), pk=kelas_id)\n    form = TugasForm(\n        request.POST or None,\n        request.FILES or None,\n        gadik=request.user,\n        kelas=kelas,",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_tugas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_tugas(request, pk):\n    queryset = Tugas.objects.all()\n    if not is_admin(request.user):\n        queryset = queryset.filter(gadik=request.user)\n    tugas = get_object_or_404(queryset, pk=pk)\n    form = TugasForm(request.POST or None, request.FILES or None, instance=tugas, gadik=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Tugas berhasil diperbarui.\")\n        return redirect(\"detail_tugas\", pk=tugas.pk)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hapus_tugas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hapus_tugas(request, pk):\n    queryset = Tugas.objects.all()\n    if not is_admin(request.user):\n        queryset = queryset.filter(gadik=request.user)\n    tugas = get_object_or_404(queryset, pk=pk)\n    if request.method == \"POST\":\n        kelas_id = tugas.kelas_id\n        tugas.delete()\n        messages.success(request, \"Tugas berhasil dihapus.\")\n        return redirect(\"detail_kelas\", pk=kelas_id)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_ujian",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_ujian(request):\n    ujian = Ujian.objects.select_related(\"kelas\", \"mapel\", \"gadik\").annotate(\n        jumlah_pengumpulan=Count(\"pengumpulan\", filter=Q(pengumpulan__submitted_at__isnull=False), distinct=True)\n    )\n    if request.user.role == CustomUser.Role.GADIK:\n        ujian = ujian.filter(mapel__gadik_pengajar=request.user).distinct()\n    elif request.user.role == CustomUser.Role.SERDIK:\n        ujian = ujian.filter(kelas__anggota__serdik=request.user)\n        percobaan = {\n            item.ujian_id: item",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "buat_ujian",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def buat_ujian(request):\n    form = UjianForm(request.POST or None, gadik=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        ujian = form.save(commit=False)\n        ujian.gadik = request.user\n        ujian.full_clean()\n        ujian.save()\n        messages.success(request, \"Ujian berhasil diterbitkan.\")\n        return redirect(\"daftar_ujian\")\n    return render(request, \"lms/form_ujian.html\", {\"form\": form, \"title\": \"Buat Ujian\"})",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "ubah_ujian",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def ubah_ujian(request, pk):\n    ujian = get_object_or_404(ujian_for_manager(request.user), pk=pk)\n    form = UjianForm(request.POST or None, instance=ujian, gadik=request.user)\n    if request.method == \"POST\" and form.is_valid():\n        form.save()\n        messages.success(request, \"Pengaturan ujian berhasil diperbarui.\")\n        return redirect(\"daftar_ujian\")\n    return render(\n        request,\n        \"lms/form_ujian.html\",",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kelola_soal_esai",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kelola_soal_esai(request, pk):\n    queryset = ujian_for_manager(request.user, Ujian.objects.filter(metode=Ujian.Metode.ESAI))\n    ujian = get_object_or_404(queryset, pk=pk)\n    nomor_berikutnya = (ujian.soal_esai.order_by(\"-urutan\").values_list(\"urutan\", flat=True).first() or 0) + 1\n    form = SoalUjianEsaiForm(\n        request.POST or None,\n        ujian=ujian,\n        initial={\"urutan\": nomor_berikutnya},\n    )\n    if request.method == \"POST\" and form.is_valid():",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hapus_soal_esai",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hapus_soal_esai(request, pk, soal_pk):\n    queryset = ujian_for_manager(request.user, Ujian.objects.filter(metode=Ujian.Metode.ESAI))\n    ujian = get_object_or_404(queryset, pk=pk)\n    soal = get_object_or_404(SoalUjianEsai, pk=soal_pk, ujian=ujian)\n    soal.delete()\n    messages.success(request, \"Soal esai berhasil dihapus.\")\n    return redirect(\"kelola_soal_esai\", pk=ujian.pk)\n@role_required(CustomUser.Role.ADMIN, CustomUser.Role.GADIK)\ndef kelola_soal_pilihan_ganda(request, pk):\n    queryset = ujian_for_manager(request.user, Ujian.objects.filter(metode=Ujian.Metode.PILIHAN_GANDA))",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kelola_soal_pilihan_ganda",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kelola_soal_pilihan_ganda(request, pk):\n    queryset = ujian_for_manager(request.user, Ujian.objects.filter(metode=Ujian.Metode.PILIHAN_GANDA))\n    ujian = get_object_or_404(queryset, pk=pk)\n    nomor_berikutnya = (ujian.soal_pilihan_ganda.order_by(\"-urutan\").values_list(\"urutan\", flat=True).first() or 0) + 1\n    form = SoalUjianPilihanGandaForm(\n        request.POST or None,\n        ujian=ujian,\n        initial={\"urutan\": nomor_berikutnya},\n    )\n    if request.method == \"POST\" and form.is_valid():",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hapus_soal_pilihan_ganda",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hapus_soal_pilihan_ganda(request, pk, soal_pk):\n    queryset = ujian_for_manager(request.user, Ujian.objects.filter(metode=Ujian.Metode.PILIHAN_GANDA))\n    ujian = get_object_or_404(queryset, pk=pk)\n    soal = get_object_or_404(SoalUjianPilihanGanda, pk=soal_pk, ujian=ujian)\n    soal.delete()\n    messages.success(request, \"Soal pilihan ganda berhasil dihapus.\")\n    return redirect(\"kelola_soal_pilihan_ganda\", pk=ujian.pk)\n@role_required(CustomUser.Role.SERDIK)\n@transaction.atomic\n@require_POST",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "mulai_ujian_esai",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def mulai_ujian_esai(request, pk):\n    ujian = get_object_or_404(\n        Ujian.objects.filter(kelas__anggota__serdik=request.user),\n        pk=pk,\n    )\n    if not ujian.sudah_mulai:\n        messages.error(request, \"Ujian belum dapat dimulai.\")\n        return redirect(\"daftar_ujian\")\n    if ujian.sudah_selesai:\n        messages.error(request, \"Batas akhir ujian telah terlewat.\")",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kerjakan_ujian_esai",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kerjakan_ujian_esai(request, pk):\n    ujian = get_object_or_404(\n        Ujian.objects.filter(kelas__anggota__serdik=request.user),\n        pk=pk,\n    )\n    percobaan = PengumpulanUjian.objects.filter(ujian=ujian, serdik=request.user).first()\n    if not percobaan:\n        messages.info(request, \"Konfirmasi mulai ujian terlebih dahulu.\")\n        return redirect(\"daftar_ujian\")\n    if percobaan.sudah_dikumpulkan:",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kerjakan_ujian_pilihan_ganda",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kerjakan_ujian_pilihan_ganda(request, ujian, percobaan):\n    soal = list(ujian.soal_pilihan_ganda.prefetch_related(\"opsi\"))\n    if not soal:\n        messages.error(request, \"Soal ujian belum tersedia.\")\n        return redirect(\"daftar_ujian\")\n    form = JawabanUjianPilihanGandaForm(request.POST or None, soal=soal)\n    if request.method == \"POST\" and form.is_valid():\n        percobaan = PengumpulanUjian.objects.select_for_update().get(pk=percobaan.pk)\n        if percobaan.waktu_habis:\n            messages.error(request, \"Waktu pengerjaan ujian Anda telah habis dan jawaban tidak dapat dikumpulkan.\")",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "hasil_ujian",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def hasil_ujian(request, pk):\n    if request.user.role == CustomUser.Role.SERDIK:\n        if request.method == \"POST\":\n            raise PermissionDenied\n        ujian = get_object_or_404(Ujian.objects.filter(kelas__anggota__serdik=request.user), pk=pk)\n        pengumpulan = get_object_or_404(\n            ujian.pengumpulan.filter(serdik=request.user, submitted_at__isnull=False).select_related(\"serdik\")\n        )\n        if ujian.metode == Ujian.Metode.PILIHAN_GANDA:\n            jawaban = list(",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "detail_tugas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def detail_tugas(request, pk):\n    tugas_queryset = Tugas.objects.select_related(\"kelas\", \"mapel\", \"gadik\").filter(\n        kelas__in=kelas_for_user(request.user)\n    )\n    if request.user.role == CustomUser.Role.GADIK:\n        tugas_queryset = tugas_queryset.filter(mapel__gadik_pengajar=request.user)\n    tugas = get_object_or_404(tugas_queryset, pk=pk)\n    pengumpulan = None\n    if request.user.role == CustomUser.Role.SERDIK:\n        pengumpulan = PengumpulanTugas.objects.select_related(\"dinilai_oleh\").filter(",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "kumpulkan_tugas",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def kumpulkan_tugas(request, pk):\n    tugas = get_object_or_404(Tugas.objects.filter(kelas__anggota__serdik=request.user), pk=pk)\n    pengumpulan = PengumpulanTugas.objects.filter(tugas=tugas, serdik=request.user).first()\n    if pengumpulan and pengumpulan.status == PengumpulanTugas.Status.DINILAI:\n        messages.error(request, \"Tugas yang sudah dinilai tidak dapat diunggah ulang.\")\n        return redirect(\"detail_tugas\", pk=tugas.pk)\n    form = PengumpulanTugasForm(request.POST or None, request.FILES or None, instance=pengumpulan)\n    if request.method == \"POST\" and form.is_valid():\n        pengumpulan = form.save(commit=False)\n        pengumpulan.tugas = tugas",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_pengumpulan",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_pengumpulan(request, pk):\n    queryset = Tugas.objects.all()\n    if not is_admin(request.user):\n        queryset = queryset.filter(mapel__gadik_pengajar=request.user).distinct()\n    tugas = get_object_or_404(queryset, pk=pk)\n    pengumpulan = list(tugas.pengumpulan.select_related(\"serdik\"))\n    serdik_sudah_mengumpulkan = [item.serdik_id for item in pengumpulan]\n    belum_mengumpulkan = tugas.kelas.anggota.select_related(\"serdik\").exclude(\n        serdik_id__in=serdik_sudah_mengumpulkan\n    ).order_by(\"serdik__nama_lengkap\", \"serdik__nip_nrp\")",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "nilai_pengumpulan",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def nilai_pengumpulan(request, pk):\n    pengumpulan = get_object_or_404(\n        PengumpulanTugas.objects.select_related(\"tugas\", \"tugas__mapel\", \"serdik\"),\n        pk=pk,\n    )\n    if not is_admin(request.user) and not pengumpulan.tugas.mapel.gadik_pengajar.filter(pk=request.user.pk).exists():\n        raise PermissionDenied\n    form = PenilaianForm(request.POST or None, instance=pengumpulan)\n    if request.method == \"POST\" and form.is_valid():\n        pengumpulan = form.save(commit=False)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "daftar_nilai",
+        "kind": 2,
+        "importPath": "lms.views",
+        "description": "lms.views",
+        "peekOfCode": "def daftar_nilai(request):\n    pengumpulan = PengumpulanTugas.objects.select_related(\n        \"tugas\", \"tugas__mapel\", \"tugas__kelas\", \"dinilai_oleh\"\n    )\n    pengumpulan_ujian = PengumpulanUjian.objects.select_related(\n        \"ujian\", \"ujian__mapel\", \"ujian__kelas\"\n    ).filter(submitted_at__isnull=False).order_by(\"-submitted_at\")\n    if not is_admin(request.user):\n        pengumpulan = pengumpulan.filter(serdik=request.user)\n        pengumpulan_ujian = pengumpulan_ujian.filter(serdik=request.user)",
+        "detail": "lms.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "mediabelajar.asgi",
+        "description": "mediabelajar.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "mediabelajar.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_timezone_name",
+        "kind": 2,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "def get_system_timezone_name():\n    offset = datetime.now().astimezone().utcoffset()\n    if offset is None or offset.total_seconds() % 3600:\n        return 'UTC'\n    hours = int(offset.total_seconds() // 3600)\n    if hours == 0:\n        return 'UTC'\n    sign = '-' if hours > 0 else '+'\n    return f'Etc/GMT{sign}{abs(hours)}'\n# Build paths inside the project like this: BASE_DIR / 'subdir'.",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-*cypm3n+^#36nitvnqlk(1#-kz80nubkxucz=fih2+if)$0wb_'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-*cypm3n+^#36nitvnqlk(1#-kz80nubkxucz=fih2+if)$0wb_'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'lms.apps.LmsConfig',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'lms.apps.LmsConfig',\n]\nMIDDLEWARE = [",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'mediabelajar.urls'",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "ROOT_URLCONF = 'mediabelajar.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'mediabelajar.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/6.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'id'\nTIME_ZONE = get_system_timezone_name()\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "TIME_ZONE = get_system_timezone_name()\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / 'static']\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nAUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'lms.CustomUser'\nLOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',\n    },",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "LOGIN_URL = 'login'\nLOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',\n    },\n}",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = 'dashboard'\nLOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',\n    },\n}\nAUTHENTICATION_BACKENDS = [",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = 'login'\n# Email\n# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration\nMAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',\n    },\n}\nAUTHENTICATION_BACKENDS = [\n    \"lms.backend.NipNrpBackend\",",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MAILERS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "MAILERS = {\n    'default': {\n        'BACKEND': 'django.core.mail.backends.console.EmailBackend',\n    },\n}\nAUTHENTICATION_BACKENDS = [\n    \"lms.backend.NipNrpBackend\",\n]",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTHENTICATION_BACKENDS",
+        "kind": 5,
+        "importPath": "mediabelajar.settings",
+        "description": "mediabelajar.settings",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    \"lms.backend.NipNrpBackend\",\n]",
+        "detail": "mediabelajar.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "mediabelajar.urls",
+        "description": "mediabelajar.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\n        \"masuk/\",\n        auth_views.LoginView.as_view(template_name=\"registration/login.html\"),\n        name=\"login\",\n    ),\n    path(\"keluar/\", auth_views.LogoutView.as_view(), name=\"logout\"),\n    path(\"\", include(\"lms.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "mediabelajar.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "mediabelajar.wsgi",
+        "description": "mediabelajar.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "mediabelajar.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mediabelajar.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
